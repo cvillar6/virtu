@@ -1,6 +1,21 @@
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
 @plugin "tailwindcss-primeui";
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter Font/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @theme {
+  --font-primary: 'Inter', sans-serif;
   --color-primary: #ff33e9;
+}
+
+body {
+  font-family: var(--font-primary);
 }
