@@ -1,0 +1,14 @@
+<main class="bg-section py-14 px-4">
+    <h2 class="text-3xl text-white text-center mb-10">
+        Empowering Healthcare with Smarter Solutions
+    </h2>
+
+    <ul class="flex flex-col gap-4">
+        @for (solution of SOLUTIONS; track solution.title) {
+        <li>
+            <app-smarter-solution-card [title]="solution.title" [description]="solution.description"
+                [image]="solution.image" />
+        </li>
+        }
+    </ul>
+</main>

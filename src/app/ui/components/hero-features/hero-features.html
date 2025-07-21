@@ -1,0 +1,11 @@
+<main class="py-14 px-4">
+
+    <ul class="flex flex-col">
+        @for (feature of FEATURES; track feature.title) {
+        <li>
+            <app-hero-feature-card [title]="feature.title" [description]="feature.description"
+                [image]="feature.image" />
+        </li>
+        }
+    </ul>
+</main>
