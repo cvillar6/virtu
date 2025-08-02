@@ -1,0 +1,17 @@
+<main class="group p-4 bg-result-card rounded-xl h-[220px]">
+    <p class="text-title text-6xl mb-4">
+        {{ data }}%
+    </p>
+
+    <div class="relative">
+        <p
+            class="text-title text-base leading-7 transition-all ease-in-out duration-500 group-hover:opacity-0 group-hover:transform group-hover:-translate-y-2">
+            {{ title }}
+        </p>
+
+        <p
+            class="text-title text-sm leading-7 absolute inset-0 opacity-0 transition-all ease-in-out duration-500 group-hover:opacity-100 group-hover:transform group-hover:translate-y-0">
+            {{ description }}
+        </p>
+    </div>
+</main>

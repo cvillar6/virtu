@@ -1,0 +1,17 @@
+::ng-deep .p-panelmenu-panel {
+    border: none;
+}
+
+::ng-deep .p-panelmenu-header-content:hover {
+    background-color: transparent;
+}
+
+::ng-deep .p-accordion-header {
+    i::before {
+        width: 40px;
+    }
+}
+
+::ng-deep .p-megamenu-overlay {
+    padding-left: 206px;
+}
