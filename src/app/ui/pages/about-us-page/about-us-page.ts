@@ -14,12 +14,12 @@ export class AboutUsPage {
   coreValues: ICoreValue[] = [
     {
       title: 'Our Mission',
-      description: 'Streamline workflows, reduce manual tasks, and enhance collaboration with a unified platform designed for healthcare providers.',
+      description: 'At Virtu, we are transforming healthcare by bridging clinical care and data science to enable better outcomes, greater transparency, and more human-centered systems. We believe every patient has the right to understand and own their health data — and every provider deserves tools that make care smarter, not harder. Through innovation in electronic records and analytics, we empower those on the front lines of care to act with clarity, compassion, and confidence.',
       icon: 'pi pi-bullseye'
     },
     {
       title: 'Our Vision',
-      description: 'Streamline workflows, reduce manual tasks, and enhance collaboration with a unified platform designed for healthcare providers.',
+      description: 'At Virtu, we envision a future where every person—regardless of who they are or where they come from—has full ownership of their healthcare journey, with instant access to their complete health history and the power to shape their care with confidence and dignity. In this future, a unified national health data repository ensures no record is lost, no treatment is uninformed, and no voice goes unheard. Care is no longer fragmented or reactive—it’s connected, continuous, and deeply human.',
       icon: 'pi pi-heart'
     }
   ]
