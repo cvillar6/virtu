@@ -15,9 +15,9 @@
                 </p>
             </div>
 
-            <img src="/images/contact-us-m.svg" alt="Contact Us" class="absolute top-0 right-0 h-full z-0 lg:hidden"
+            <img src="images/contact-us-m.svg" alt="Contact Us" class="absolute top-0 right-0 h-full z-0 lg:hidden"
                 loading="lazy">
-            <img src="/images/contact-us-d.svg" alt="Contact Us"
+            <img src="images/contact-us-d.svg" alt="Contact Us"
                 class="hidden lg:block absolute top-0 right-0 h-full z-0" loading="lazy">
         </main>
     </section>
@@ -30,7 +30,7 @@
             <ul class="flex flex-col gap-6 lg:gap-14">
                 @for (contact of contactUs; track contact.title) {
                 <li>
-                    <app-contact-us-card [title]="contact.title" [value]="contact.value" [icon]="contact.icon" />
+                    <app-contact-us-card [data]="contact" />
                 </li>
                 }
             </ul>

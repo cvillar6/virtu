@@ -22,7 +22,15 @@
     </div>
 
     <div class="flex justify-center lg:justify-end lg:mt-5">
-        <button pButton type="submit" label="Send Message"
-            class="primary-button hover:primary-button-hover w-fit"></button>
+        <button pButton type="submit" class="primary-button hover:primary-button-hover w-fit"
+            [disabled]="isSubmitting() || messageSent()">
+            @if (isSubmitting()) {
+            <i class="pi pi-spin pi-spinner"></i> Submitting...
+            } @else if (messageSent()) {
+            Message Sent
+            } @else {
+            Send Message
+            }
+        </button>
     </div>
 </form>

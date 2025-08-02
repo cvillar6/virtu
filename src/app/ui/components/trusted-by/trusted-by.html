@@ -4,7 +4,7 @@
 
     <div class="carousel-container">
         <div class="carousel-track">
-            @for (image of IMAGES; track image; let i = $index) {
+            @for (image of IMAGES; track i; let i = $index) {
             <div class="carousel-slide">
                 <img [src]="image" [alt]="'Slide ' + (i + 1)" class="carousel-image" loading="lazy">
             </div>
