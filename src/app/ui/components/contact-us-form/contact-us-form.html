@@ -1,19 +1,23 @@
-<form action="" class="flex flex-col gap-5 bg-white py-8 px-4 rounded-xl border border-border">
+<form [formGroup]="form" (ngSubmit)="onSubmit()"
+    class="flex flex-col gap-5 bg-white py-8 px-4 rounded-xl border border-border">
     <div class="flex flex-col gap-2">
         <label for="name" class="text-primary text-base font-semibold">Name</label>
-        <input pInputText id="name" placeholder="Your name" class="px-4 py-3 rounded-lg text-base text-gray" />
+        <input pInputText id="name" name="name" formControlName="name" placeholder="Your name"
+            class="px-4 py-3 rounded-lg text-base text-gray" />
     </div>
     <div class="flex flex-col gap-2">
         <label for="email" class="text-primary text-base font-semibold">Email</label>
-        <input pInputText id="email" placeholder="Your email" class="px-4 py-3 rounded-lg text-base text-gray" />
+        <input pInputText id="email" name="email" formControlName="email" placeholder="Your email"
+            class="px-4 py-3 rounded-lg text-base text-gray" />
     </div>
     <div class="flex flex-col gap-2">
         <label for="phone" class="text-primary text-base font-semibold">Phone</label>
-        <input pInputText id="phone" placeholder="Your phone" class="px-4 py-3 rounded-lg text-base text-gray" />
+        <input pInputText id="phone" name="phone" formControlName="phone" placeholder="Your phone"
+            class="px-4 py-3 rounded-lg text-base text-gray" />
     </div>
     <div class="flex flex-col gap-2">
         <label for="message" class="text-primary text-base font-semibold">Your Message</label>
-        <textarea pInputTextarea id="message" placeholder="Write your message"
+        <textarea pInputTextarea id="message" name="message" formControlName="message" placeholder="Write your message"
             class="px-4 py-3 rounded-lg text-base text-gray"></textarea>
     </div>
 
