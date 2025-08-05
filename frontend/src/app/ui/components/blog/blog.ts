@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { IBlog } from '../../interfaces/blog';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './blog.html',
   styleUrl: './blog.css'
 })
