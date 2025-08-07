@@ -2,7 +2,7 @@
     @for (item of content; track item) {
     <!-- Heading -->
     @if (item.type === 'heading') {
-    <h2 class="text-3xl font-semibold text-subtitle mb-7">
+    <h2 class="text-3xl font-semibold text-subtitle mb-7" [class.text-white]="darkBackground">
         @for (child of item.children; track child) {
         @if (isTextNode(child)) {
         <span [class.font-bold]="child.bold">
@@ -22,7 +22,7 @@
 
     <!-- Paragraph -->
     @if (item.type === 'paragraph') {
-    <p class="text-lg text-subtitle mb-7 leading-8">
+    <p class="text-lg text-subtitle mb-7 leading-8" [class.text-white]="darkBackground">
         @for (child of item.children; track child) {
         @if (isTextNode(child)) {
         <span [class.font-bold]="child.bold">
@@ -42,7 +42,7 @@
 
     <!-- Unordered List -->
     @if (item.type === 'list' && item.format === 'unordered') {
-    <ul class="text-lg text-subtitle leading-8 list-disc list-inside mb-7 space-y-2">
+    <ul class="text-lg text-subtitle leading-8 list-disc list-inside mb-7 space-y-2" [class.text-white]="darkBackground">
         @for (listItem of item.children; track listItem) {
         @if (isListItemNode(listItem)) {
         <li>
@@ -68,7 +68,7 @@
 
     <!-- Ordered List -->
     @if (item.type === 'list' && item.format === 'ordered') {
-    <ol class="text-lg text-subtitle leading-8 mb-7 space-y-2">
+    <ol class="text-lg text-subtitle leading-8 mb-7 space-y-2" [class.text-white]="darkBackground">
         @for (listItem of item.children; track listItem) {
         @if (isListItemNode(listItem)) {
         <li>

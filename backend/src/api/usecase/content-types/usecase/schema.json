@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usecases",
+  "info": {
+    "singularName": "usecase",
+    "pluralName": "usecases",
+    "displayName": "Usecase"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "ExtendedDescription": {
+      "type": "text"
+    },
+    "Data": {
+      "type": "component",
+      "component": "dynamic.data",
+      "repeatable": true
+    },
+    "Info": {
+      "type": "component",
+      "component": "dynamic.info",
+      "repeatable": false
+    }
+  }
+}

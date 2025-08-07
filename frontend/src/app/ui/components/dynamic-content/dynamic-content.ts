@@ -33,6 +33,7 @@ interface ContentNode {
 })
 export class DynamicContent {
   @Input() content: ContentNode[] = [];
+  @Input() darkBackground = false;
 
   isTextNode(node: any): node is TextNode {
     return node.type === 'text';
