@@ -1,0 +1,31 @@
+<main>
+    @if (blog$ | async; as blog) {
+    <section class="bg-hero-section py-20 lg:py-24">
+        <main class="section-container lg:py-40">
+            <h1 class="text-4xl text-white text-center lg:text-6xl lg:text-left">
+                {{blog.title}}
+            </h1>
+        </main>
+    </section>
+
+    <section class="section-container lg:!px-48">
+        <app-dynamic-content [content]="blog.content" />
+    </section>
+
+    <section class="section-container">
+        <h2 class="text-3xl text-subtitle mb-8 lg:mb-16">
+            Related posts
+        </h2>
+
+        @if (relatedBlogs$ | async; as relatedBlogs) {
+        <ul class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-4">
+            @for (blog of relatedBlogs; track blog.documentID) {
+            <li>
+                <app-blog [blog]="blog" />
+            </li>
+            }
+        </ul>
+        }
+    </section>
+    }
+</main>

@@ -29,6 +29,9 @@
   --color-border: #E6E6E6;
   --color-hero-section: #122954;
   --color-icon: #71DBD4;
+  --color-paginator-selected: #1B3E7E;
+  --color-blog-title: #121417;
+  --color-blog-description: #667082;
 }
 
 body {

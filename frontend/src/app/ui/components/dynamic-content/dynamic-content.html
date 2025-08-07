@@ -1,0 +1,95 @@
+<div class="dynamic-content">
+    @for (item of content; track item) {
+    <!-- Heading -->
+    @if (item.type === 'heading') {
+    <h2 class="text-3xl font-semibold text-subtitle mb-7">
+        @for (child of item.children; track child) {
+        @if (isTextNode(child)) {
+        <span [class.font-bold]="child.bold">
+            {{ child.text }}
+        </span>
+        }
+        @if (isLinkNode(child)) {
+        <a [href]="child.url" class="text-blue-600 hover:text-blue-800 underline">
+            @for (linkChild of child.children; track linkChild) {
+            {{ linkChild.text }}
+            }
+        </a>
+        }
+        }
+    </h2>
+    }
+
+    <!-- Paragraph -->
+    @if (item.type === 'paragraph') {
+    <p class="text-lg text-subtitle mb-7 leading-8">
+        @for (child of item.children; track child) {
+        @if (isTextNode(child)) {
+        <span [class.font-bold]="child.bold">
+            {{ child.text }}
+        </span>
+        }
+        @if (isLinkNode(child)) {
+        <a [href]="child.url" target="_blank" class="text-blue-600 hover:text-blue-800 underline">
+            @for (linkChild of child.children; track linkChild) {
+            {{ linkChild.text }}
+            }
+        </a>
+        }
+        }
+    </p>
+    }
+
+    <!-- Unordered List -->
+    @if (item.type === 'list' && item.format === 'unordered') {
+    <ul class="text-lg text-subtitle leading-8 list-disc list-inside mb-7 space-y-2">
+        @for (listItem of item.children; track listItem) {
+        @if (isListItemNode(listItem)) {
+        <li>
+            @for (child of listItem.children; track child) {
+            @if (isTextNode(child)) {
+            <span [class.font-bold]="child.bold">
+                {{ child.text }}
+            </span>
+            }
+            @if (isLinkNode(child)) {
+            <a [href]="child.url" class="text-blue-600 hover:text-blue-800 underline">
+                @for (linkChild of child.children; track linkChild) {
+                {{ linkChild.text }}
+                }
+            </a>
+            }
+            }
+        </li>
+        }
+        }
+    </ul>
+    }
+
+    <!-- Ordered List -->
+    @if (item.type === 'list' && item.format === 'ordered') {
+    <ol class="text-lg text-subtitle leading-8 mb-7 space-y-2">
+        @for (listItem of item.children; track listItem) {
+        @if (isListItemNode(listItem)) {
+        <li>
+            @for (child of listItem.children; track child) {
+            @if (isTextNode(child)) {
+            <span [class.font-bold]="child.bold">
+                {{ child.text }}
+            </span>
+            }
+            @if (isLinkNode(child)) {
+            <a [href]="child.url" class="text-blue-600 hover:text-blue-800 underline">
+                @for (linkChild of child.children; track linkChild) {
+                {{ linkChild.text }}
+                }
+            </a>
+            }
+            }
+        </li>
+        }
+        }
+    </ol>
+    }
+    }
+</div>

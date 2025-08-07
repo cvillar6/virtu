@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CompanyData } from '../../interfaces/company-data';
+import { ICompanyData } from '../../interfaces/company-data';
 
 @Component({
   selector: 'app-contact-us-card',
@@ -8,5 +8,5 @@ import { CompanyData } from '../../interfaces/company-data';
   styleUrl: './contact-us-card.css'
 })
 export class ContactUsCard {
-  @Input() data!: CompanyData;
+  @Input() data!: ICompanyData;
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { User } from '../ui/interfaces/user';
+import { IUser } from '../ui/interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,7 @@ import { User } from '../ui/interfaces/user';
 export class Contact {
   private http = inject(HttpClient);
 
-  sendContact(data: User) {
+  sendContact(data: IUser) {
     return this.http.post('https://formspree.io/f/mqallbzl', data);
   }
 }
