@@ -1,0 +1,69 @@
+<main>
+    <section class="bg-hero-section py-20 lg:py-24">
+        <main class="section-container bg-white relative lg:py-40">
+            <div class="max-w-5xl relative z-10">
+                <div class="mb-14">
+                    <p class="text-2xl text-subtitle lg:text-6xl lg:font-light">Stay Informed with the Latest Updates
+                    </p>
+                    <h1 class="text-5xl text-subtitle lg:text-7xl">
+                        From Virtu Medical News
+                    </h1>
+                </div>
+                <p class="text-base leading-7 lg:text-2xl lg:leading-9">
+                    Explore timely news updates on healthcare innovation, Virtu Medical announcements, product launches,
+                    partnerships, and industry insights.
+                </p>
+                <p class="text-base leading-7 lg:text-2xl lg:leading-9">
+                    Stay ahead with the information that matters most to healthcare professionals and technology
+                    leaders.
+                </p>
+            </div>
+
+            <img src="images/resources-m.svg" alt="Cell" class="absolute top-0 right-0 h-full z-0 lg:hidden"
+                loading="lazy">
+            <img src="images/news-d.svg" alt="Cell" class="hidden lg:block absolute top-0 right-0 h-full z-0"
+                loading="lazy">
+        </main>
+    </section>
+
+    @if (news$ | async; as news) {
+    <section class="section-container">
+        <div class="mb-8 lg:flex lg:justify-between lg:items-center lg:mb-16">
+            <h2 class="text-3xl text-subtitle mb-4 lg:mb-0 lg:text-5xl">
+                All News
+            </h2>
+
+            <p class="text-2xl text-description">
+                {{ news.length }} results
+            </p>
+        </div>
+
+        <div>
+            <div class="mb-8 lg:mb-16">
+                <ul class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-4">
+                    @for (oNew of news; track oNew.documentID) {
+                    <li>
+                        <app-new [oNew]="oNew" />
+                    </li>
+                    }
+                </ul>
+            </div>
+
+
+            <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="50"
+                [showFirstLastIcon]="false" class="p-0">
+                <ng-template pTemplate="previouspagelinkicon">
+                    <i class="pi pi-arrow-left"></i>
+                </ng-template>
+                <ng-template pTemplate="nextpagelinkicon">
+                    <i class="pi pi-arrow-right"></i>
+                </ng-template>
+            </p-paginator>
+        </div>
+    </section>
+    }
+
+    <section>
+        <app-contact-us />
+    </section>
+</main>

@@ -1,0 +1,11 @@
+<main class="section-container">
+
+    <ul class="flex flex-col lg:gap-96">
+        @for (feature of FEATURES; track feature.title; let i = $index) {
+        <li>
+            <app-hero-feature-card [title]="feature.title" [description]="feature.description"
+                [image]="feature.image" [imagePosition]="i % 2 === 0 ? 'left' : 'right'" />
+        </li>
+        }
+    </ul>
+</main>

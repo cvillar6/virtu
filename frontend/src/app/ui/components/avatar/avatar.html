@@ -1,0 +1,22 @@
+<main class="flip-card cursor-pointer">
+    <div class="flip-card-inner bg-solution-card rounded-xl">
+        <div class="front-face">
+            <div class="mb-7 flex justify-center">
+                <img [src]="avatar.image" [alt]="avatar.name" class="object-cover">
+            </div>
+            <div>
+                <h3 class="text-3xl text-white text-center font-semibold mb-3">
+                    {{avatar.name}}
+                </h3>
+                <p class="text-2xl text-white text-center">
+                    {{avatar.position}}
+                </p>
+            </div>
+        </div>
+        <div class="back-face flex items-center justify-center">
+            <p class="text-xs text-white leading-7 lg:text-base">
+                {{avatar.description}}
+            </p>
+        </div>
+    </div>
+</main>

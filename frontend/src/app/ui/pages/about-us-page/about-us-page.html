@@ -1,0 +1,106 @@
+<main>
+    <section class="bg-hero-section py-20 lg:py-24">
+        <main class="section-container bg-white relative lg:py-40">
+            <div class="max-w-5xl relative z-10">
+                <p class="text-2xl text-subtitle lg:text-6xl lg:font-light">Revolutionizing Healthcare with</p>
+                <h1 class="text-5xl text-subtitle lg:text-7xl">
+                    Personalized, Data-Driven Solutions
+                </h1>
+            </div>
+
+            <img src="images/contact-us-m.svg" alt="Contact Us" class="absolute top-0 right-0 h-full lg:hidden z-0"
+                loading="lazy">
+            <img src="images/contact-us-d.svg" alt="Contact Us"
+                class="hidden lg:block absolute top-0 right-0 h-full z-0" loading="lazy">
+        </main>
+    </section>
+
+    <section class="section-container">
+        <div class="lg:flex lg:items-center">
+            <div class="mb-12 lg:w-1/2">
+                <img src="images/about-us.svg" alt="About Us" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="lg:w-1/2">
+                <h2 class="text-5xl text-title mb-6">
+                    About Us
+                </h2>
+                <p class="text-xl text-subtitle mb-6">
+                    With over 17 years of experience in creating, developing, and managing complex IT architecture and
+                    relational database systems, Virtu Medical is at the forefront of healthcare technology. We
+                    specialize
+                    in providing comprehensive IT solutions designed specifically for the healthcare industry,
+                    empowering
+                    organizations to manage patient care more efficiently.
+                </p>
+                <p class="text-xl text-subtitle mb-6">
+                    Our extensive expertise spans across managed care, including finance, physician risk modeling,
+                    analytics, operations management, financial underwriting, payment processing, revenue and cost
+                    reconciliation systems, and complex data integration.
+                </p>
+
+                <p class="text-xl text-subtitle">
+                    Through Virtu Medical, we are committed to delivering cutting-edge solutions that streamline
+                    operations
+                    and improve outcomes for both patients and providers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-section section-container">
+        <h2 class="text-3xl text-white text-center mb-14 lg:text-5xl lg:mb-24">
+            Empowering Healthcare with Smarter Solutions
+        </h2>
+
+        <ul class="flex flex-col gap-4 lg:flex-row lg:items-stretch">
+            @for (coreValue of coreValues; track coreValue.title) {
+            <li>
+                <app-core-value [coreValue]="coreValue"></app-core-value>
+            </li>
+            }
+        </ul>
+    </section>
+
+    <section class="bg-section section-container">
+        <h2 class="text-3xl text-white text-center mb-14 lg:text-5xl lg:mb-24">
+            Meet our Leadership
+        </h2>
+
+        <ul class="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:justify-center">
+            @for (avatar of avatars; track avatar.name) {
+            <li class="lg:w-[calc(48%)]">
+                <app-avatar [avatar]="avatar"></app-avatar>
+            </li>
+            }
+        </ul>
+
+
+    </section>
+
+    <section class="section-container">
+        <div class="py-20 px-4 bg-primary rounded-3xl relative lg:px-20">
+            <div class="max-w-[880px] relative z-10">
+                <h2 class="text-3xl text-white text-center mb-6  lg:text-left lg:text-5xl">
+                    Ready to transform your operations and elevate patient care?
+                </h2>
+
+                <p class="text-xl text-white text-center leading-9 mb-6  lg:text-left">
+                    Join the growing number of healthcare teams using Virtu's Analytics Portal to take
+                    control of their data and drive better outcomes.
+                </p>
+
+                <div class="flex justify-center relative z-10 lg:justify-start">
+                    <a href="/contact-us" class="secondary-button hover:secondary-button-hover w-fit">
+                        Book a Demo
+                    </a>
+                </div>
+            </div>
+
+            <img src="images/cell-m.svg" alt="Ready to transform" class="absolute bottom-0 right-0 z-0 lg:hidden">
+            <img src="images/cell-d.svg" alt="Ready to transform" class="absolute bottom-0 right-0 z-0 hidden lg:block">
+        </div>
+
+    </section>
+
+
+</main>
