@@ -8,12 +8,12 @@ import { ContactUs } from '../../components/contact-us/contact-us';
 import { IBlog } from '../../interfaces/blog';
 
 @Component({
-  selector: 'app-resources-page',
+  selector: 'app-blogs-page',
   imports: [PaginatorModule, ContactUs, CommonModule, Blog],
-  templateUrl: './resources-page.html',
-  styleUrl: './resources-page.css'
+  templateUrl: './blogs-page.html',
+  styleUrl: './blogs-page.css'
 })
-export class ResourcesPage {
+export class BlogsPage {
   private strapiService = inject(Strapi);
 
   first: number = 0;
