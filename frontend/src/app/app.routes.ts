@@ -3,7 +3,9 @@ import { AboutUsPage } from './ui/pages/about-us-page/about-us-page';
 import { BlogPage } from './ui/pages/blog-page/blog-page';
 import { ContactUsPage } from './ui/pages/contact-us-page/contact-us-page';
 import { HomePage } from './ui/pages/home-page/home-page';
-import { ResourcesPage } from './ui/pages/resources-page/resources-page';
+import { NewPage } from './ui/pages/new-page/new-page';
+import { NewsPage } from './ui/pages/news-page/news-page';
+import { BlogsPage } from './ui/pages/resources-page/blogs-page';
 
 export const routes: Routes = [
     {
@@ -19,12 +21,20 @@ export const routes: Routes = [
         component: AboutUsPage,
     },
     {
-        path: 'resources',
-        component: ResourcesPage,
+        path: 'blogs',
+        component: BlogsPage,
     },
     {
-        path: 'blog/:id',
+        path: 'blogs/:id',
         component: BlogPage,
+    },
+    {
+        path: 'news',
+        component: NewsPage,
+    },
+    {
+        path: 'news/:id',
+        component: NewPage,
     },
     {
         path: '**',

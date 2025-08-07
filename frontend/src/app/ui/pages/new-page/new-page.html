@@ -1,0 +1,31 @@
+<main>
+    @if (new$ | async; as oNew) {
+    <section class="bg-hero-section py-20 lg:py-24">
+        <main class="section-container lg:py-40">
+            <h1 class="text-4xl text-white text-center lg:text-6xl lg:text-left">
+                {{oNew.title}}
+            </h1>
+        </main>
+    </section>
+
+    <section class="section-container lg:!px-48">
+        <app-dynamic-content [content]="oNew.content" />
+    </section>
+
+    <section class="section-container">
+        <h2 class="text-3xl text-subtitle mb-8 lg:mb-16">
+            Related news
+        </h2>
+
+        @if (relatedNews$ | async; as relatedNews) {
+        <ul class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-4">
+            @for (oNew of relatedNews; track oNew.documentID) {
+            <li>
+                <app-new [oNew]="oNew" />
+            </li>
+            }
+        </ul>
+        }
+    </section>
+    }
+</main>

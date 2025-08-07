@@ -1,0 +1,14 @@
+::ng-deep .p-paginator-page {
+    color: var(--color-paginator-selected);
+}
+
+::ng-deep .p-paginator-page.p-paginator-page-selected {
+    background-color: var(--color-paginator-selected);
+    color: var(--color-white);
+    border-radius: 8px;
+}
+
+::ng-deep .p-paginator-next,
+::ng-deep .p-paginator-previous {
+    color: var(--color-paginator-selected);
+}
