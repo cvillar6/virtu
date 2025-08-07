@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_dynamic_data",
+  "info": {
+    "displayName": "Data",
+    "icon": "slideshow"
+  },
+  "options": {},
+  "attributes": {
+    "Quantity": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

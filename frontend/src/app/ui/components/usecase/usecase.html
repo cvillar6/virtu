@@ -1,0 +1,16 @@
+<main class="h-full flex flex-col justify-between cursor-pointer" [routerLink]="['/usecases', usecase.documentID]">
+    <div class="mb-6">
+        <img [src]="'http://localhost:1337' + usecase.image" alt="Blog Image" class="w-full h-full object-cover">
+    </div>
+    <div class="flex-1 flex flex-col justify-between">
+        <h2 class="text-2xl text-blog-title mb-3 leading-9 line-clamp-2 min-h-[72px]">
+            {{ usecase.title }}
+        </h2>
+        <p class="text-lg text-blog-description mb-6 leading-8 line-clamp-2 min-h-[64px]">
+            {{ usecase.description }}
+        </p>
+        <span class="text-xl text-primary font-semibold">
+            Read More
+        </span>
+    </div>
+</main>

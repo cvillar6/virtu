@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_dynamic_infos",
+  "info": {
+    "displayName": "Info",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Content": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}
