@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 import { catchError, map, Observable, of, tap } from 'rxjs';
+import { environment } from '../../../../environments/environment';
 import { Strapi } from '../../../services/strapi';
 import { ContactUs } from '../../components/contact-us/contact-us';
 import { New } from '../../components/new/new';
@@ -26,7 +27,7 @@ export class NewsPage {
           documentID: oNew.documentId,
           title: oNew.Title,
           description: oNew.Description,
-          image: oNew.Image.url,
+          image: environment.apiURL + oNew.Image.url,
           content: oNew.Content,
         }));
       }

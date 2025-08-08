@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from '../../../../environments/environment';
 import { Strapi } from '../../../services/strapi';
 import { ContactUs } from '../../components/contact-us/contact-us';
 import { Usecase } from '../../components/usecase/usecase';
@@ -27,7 +28,7 @@ export class UsecasesPage {
           documentID: usecase.documentId,
           title: usecase.Title,
           description: usecase.Description,
-          image: usecase.Image.url,
+          image: environment.apiURL + usecase.Image.url,
           content: usecase.Content,
           extendedDescription: usecase.ExtendedDescription,
         }));
