@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 import { catchError, map, Observable, of, tap } from 'rxjs';
-import { environment } from '../../../../environments/environment';
 import { Strapi } from '../../../services/strapi';
 import { Blog } from '../../components/blog/blog';
 import { ContactUs } from '../../components/contact-us/contact-us';
@@ -27,7 +26,7 @@ export class BlogsPage {
           documentID: blog.documentId,
           title: blog.Title,
           description: blog.Description,
-          image: environment.apiURL + blog.Image.url,
+          image: blog.Image.url,
           content: blog.Content,
         }));
       }
