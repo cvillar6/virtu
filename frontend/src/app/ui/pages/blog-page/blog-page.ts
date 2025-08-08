@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
-import { environment } from '../../../../environments/environment';
 import { Strapi } from '../../../services/strapi';
 import { Blog } from '../../components/blog/blog';
 import { DynamicContent } from '../../components/dynamic-content/dynamic-content';
@@ -26,7 +25,7 @@ export class BlogPage {
           documentID: response.data.documentId,
           title: response.data.Title,
           description: response.data.Description,
-          image: environment.apiURL + response.data.Image.url,
+          image: response.data.Image.url,
           content: response.data.Content,
         };
       }
@@ -44,7 +43,7 @@ export class BlogPage {
           documentID: blog.documentId,
           title: blog.Title,
           description: blog.Description,
-          image: environment.apiURL + blog.Image.url,
+          image: blog.Image.url,
           content: blog.Content,
         }));
       }
