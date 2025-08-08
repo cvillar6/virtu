@@ -1,0 +1,65 @@
+<main>
+    @if (usecase$ | async; as usecase) {
+    <section class="section-container">
+        <h1 class="text-4xl text-hero-section text-center mb-4 lg:text-6xl lg:text-left lg:mb-14">
+            {{usecase.title}}
+        </h1>
+
+        <p class="text-lg text-subtitle leading-8 mb-6 lg:text-2xl lg:mb-14">
+            {{usecase.extendedDescription}}
+        </p>
+
+        <div class="mb-12 lg:mb-14">
+            <img [src]="'http://localhost:1337' + usecase.image" [alt]="usecase.title"
+                class="w-full h-auto cover-image">
+        </div>
+
+        <div>
+            <ul class="flex flex-col gap-3 lg:grid lg:grid-cols-{{usecase.data.length}}">
+                @for (item of usecase.data; track item.id) {
+                <li class="flex flex-col items-center justify-center gap-1 bg-footer rounded-xl py-7 lg:px-12">
+                    <p class="text-3xl text-white font-bold text-center">
+                        {{item.quantity}}
+                    </p>
+                    <p class="text-lg text-white leading-4 text-center">
+                        {{item.description}}
+                    </p>
+                </li>
+                }
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-container bg-footer lg:flex lg:flex-row-reverse lg:gap-12 lg:items-center">
+        <div class="lg:w-1/2">
+            <app-dynamic-content [content]="usecase.info.content" [darkBackground]="true" />
+        </div>
+
+        <div class="lg:w-1/2">
+            <img [src]="'http://localhost:1337' + usecase.info.image" [alt]="usecase.info.id"
+                class="w-full h-auto cover-image">
+        </div>
+
+    </section>
+
+    <section class="section-container lg:!px-48">
+        <app-dynamic-content [content]="usecase.content" />
+    </section>
+
+    <section class="section-container">
+        <h2 class="text-3xl text-subtitle mb-8 lg:mb-16">
+            Related usecases
+        </h2>
+
+        @if (relatedUsecases$ | async; as relatedUsecases) {
+        <ul class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-4">
+            @for (usecase of relatedUsecases; track usecase.documentID) {
+            <li>
+                <app-usecase [usecase]="usecase" />
+            </li>
+            }
+        </ul>
+        }
+    </section>
+    }
+</main>
