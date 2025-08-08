@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
-import { environment } from '../../../../environments/environment';
 import { Strapi } from '../../../services/strapi';
 import { DynamicContent } from '../../components/dynamic-content/dynamic-content';
 import { New } from '../../components/new/new';
