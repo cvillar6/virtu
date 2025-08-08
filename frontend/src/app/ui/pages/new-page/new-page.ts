@@ -26,7 +26,7 @@ export class NewPage {
           documentID: response.data.documentId,
           title: response.data.Title,
           description: response.data.Description,
-          image: environment.apiURL + response.data.Image.url,
+          image: response.data.Image.url,
           content: response.data.Content,
         };
       }
@@ -44,7 +44,7 @@ export class NewPage {
           documentID: oNew.documentId,
           title: oNew.Title,
           description: oNew.Description,
-          image: environment.apiURL + oNew.Image.url,
+          image: oNew.Image.url,
           content: oNew.Content,
         }));
       }
