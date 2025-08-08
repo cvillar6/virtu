@@ -1,14 +1,15 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Strapi {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:1337';
-  private apiToken = 'asd'
+  private apiURL = environment.apiURL;
+  private apiToken = environment.apiToken;
 
   getHeaders(): HttpHeaders {
     return new HttpHeaders({
@@ -18,11 +19,11 @@ export class Strapi {
   }
 
   getContentType(contentType: string): Observable<any> {
-    return this.http.get(`${this.apiUrl}/api/${contentType}?populate=*`, { headers: this.getHeaders() });
+    return this.http.get(`${this.apiURL}/api/${contentType}?populate=*`, { headers: this.getHeaders() });
   }
 
   getSingleItem(contentType: string, id: number, componentsToPopulate?: string[]): Observable<any> {
-    let url = `${this.apiUrl}/api/${contentType}/${id}`;
+    let url = `${this.apiURL}/api/${contentType}/${id}`;
 
     if (componentsToPopulate && componentsToPopulate.length > 0) {
       url += '?';

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
+import { environment } from '../../../../environments/environment';
 import { Strapi } from '../../../services/strapi';
 import { DynamicContent } from '../../components/dynamic-content/dynamic-content';
 import { Usecase } from '../../components/usecase/usecase';
@@ -25,7 +26,7 @@ export class UsecasePage {
           documentID: response.data.documentId,
           title: response.data.Title,
           description: response.data.Description,
-          image: response.data.Image.url,
+          image: environment.apiURL + response.data.Image.url,
           content: response.data.Content,
           extendedDescription: response.data.ExtendedDescription,
           data: response.data.Data.map((item: any) => ({
@@ -36,7 +37,7 @@ export class UsecasePage {
           info: {
             id: response.data.Info.id,
             content: response.data.Info.Content,
-            image: response.data.Info.Image.url,
+            image: environment.apiURL + response.data.Info.Image.url,
           },
         };
       }
@@ -54,7 +55,7 @@ export class UsecasePage {
           documentID: usecase.documentId,
           title: usecase.Title,
           description: usecase.Description,
-          image: usecase.Image.url,
+          image: environment.apiURL + usecase.Image.url,
           content: usecase.Content,
           extendedDescription: usecase.ExtendedDescription,
         }));
