@@ -15,17 +15,17 @@ export class ContactUsPage implements AfterViewInit {
     {
       title: 'Office Address',
       value: '3003 N. Commerce Pkwy, Miramar, FL 33025',
-      icon: 'map-marker'
+      icon: 'images/map-marker.svg'
     },
     {
       title: 'Phone Number',
       value: 'T. 1.888.569.4201',
-      icon: 'phone'
+      icon: 'images/phone.svg'
     },
     {
       title: 'Email Address',
       value: 'info@virtumedical.com',
-      icon: 'envelope'
+      icon: 'images/envelope.svg'
     },
   ]
 
