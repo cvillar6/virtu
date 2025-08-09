@@ -19,3 +19,41 @@
 ::ng-deep .p-megamenu-overlay {
     padding-left: 206px;
 }
+
+::ng-deep .p-megamenu-overlay {
+    z-index: 1000;
+}
+
+::ng-deep .p-megamenu-submenu-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1B3E7E;
+}
+
+::ng-deep .p-megamenu-item-link {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 400;
+}
+
+::ng-deep .p-megamenu-item-link:hover {
+    color: #1B3E7E;
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+
+::ng-deep .p-megamenu-item-content:hover {
+    background-color: transparent;
+}
+
+::ng-deep .p-megamenu-end {
+    margin: 0;
+}
+
+::ng-deep p-megamenu-sub {
+    flex: 1;
+}
+
+::ng-deep .p-megamenu-root-list {
+    justify-content: flex-end;
+}

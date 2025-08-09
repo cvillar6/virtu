@@ -19,36 +19,24 @@ export class Header implements OnInit {
     this.items = [
       {
         label: 'Home',
+        routerLink: '/',
       },
       {
         label: 'Solutions',
         items: [
           [
             {
-              label: 'Virtu Analytics portal',
+              label: 'Solutions',
               items: [
-                { label: 'DataCraft' },
-                { label: 'Membership' },
-                { label: 'Complex Cases' },
-                { label: 'Pharmacy' },
-                { label: 'Labs' },
-                { label: 'Claims' },
-                { label: 'MRA' },
-                { label: 'Revenue' },
-                { label: 'Reports' },
-              ],
-            },
-          ],
-          [
-            {
-              label: 'Virtu Analytics portal',
-              items: [
+                { label: 'Analytics portal' },
                 { label: 'Imaging' },
                 { label: 'Hospitalization' },
                 { label: 'Referral Managements' },
                 { label: 'Patient Outreach' },
                 { label: 'Disenrollments' },
                 { label: 'Transportation' },
+                { label: 'EHR' },
+                { label: 'Patient Mobile App' },
               ],
             },
           ],
@@ -56,26 +44,25 @@ export class Header implements OnInit {
       },
       {
         label: 'Industries',
-        items: [
-          [
-            {
-              items: [
-                { label: 'ACOs' },
-                { label: 'Value-Based Care Providers' },
-                { label: 'Medicare Advantage' },
-                { label: 'Physician Groups' },
-                { label: 'Hospitals & Health Systems' },
-                { label: 'Correctional Health' },
-              ],
-            },
-          ],
-        ],
       },
       {
         label: 'About Us',
+        routerLink: '/about-us',
       },
       {
         label: 'Resources',
+        items: [
+          [
+            {
+              label: 'Resources',
+              items: [
+                { label: 'Blogs', routerLink: '/blogs' },
+                { label: 'Case Studies', routerLink: '/usecases' },
+                { label: 'News', routerLink: '/news' }
+              ]
+            }
+          ],
+        ],
       },
     ];
   }

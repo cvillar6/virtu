@@ -3,7 +3,7 @@
     <p-accordion value="0">
         <p-accordion-panel value="1">
             <p-accordion-header class="shadow">
-                <img src="images/virtu-m.svg" alt="virtu">
+                <img src="images/virtu.svg" alt="virtu">
                 <ng-template #toggleicon let-active="active">
                     @if (active) {
                     <i class="pi pi-times text-4xl text-primary"></i>
@@ -130,15 +130,14 @@
 
 <!-- Desktop -->
 <header class="hidden lg:block">
-    <p-megamenu [model]="items" class="px-14 py-4">
+    <p-megamenu [model]="items" class="px-14 py-4 justify-between flex-1 border-none gap-8">
         <ng-template #start>
-            <img src="images/virtu-m.svg" alt="virtu">
+            <img src="images/logo.png" class="w-52" alt="virtu">
         </ng-template>
         <ng-template #end>
-            <a routerLink="/" pButton>
-                <span pButtonLabel>{{ REQUEST_DEMO_TEXT }}</span>
+            <a class="primary-button rounded-lg! text-base! px-5! py-2! " routerLink="/contact-us">
+                REQUEST A DEMO
             </a>
         </ng-template>
     </p-megamenu>
-
 </header>
