@@ -1,12 +1,13 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { ContactUsCard } from '../../components/contact-us-card/contact-us-card';
 import { ContactUsForm } from '../../components/contact-us-form/contact-us-form';
+import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { ICompanyData } from '../../interfaces/company-data';
 
 declare var VANTA: any;
 @Component({
   selector: 'app-contact-us-page',
-  imports: [ContactUsCard, ContactUsForm],
+  imports: [HeroBanner, ContactUsCard, ContactUsForm],
   templateUrl: './contact-us-page.html',
   styleUrl: './contact-us-page.css'
 })

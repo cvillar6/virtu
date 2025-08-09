@@ -1,11 +1,7 @@
 <main>
     @if (new$ | async; as oNew) {
-    <section class="bg-hero-section py-20 lg:py-24">
-        <main class="section-container lg:py-40">
-            <h1 class="text-4xl text-white text-center lg:text-6xl lg:text-left">
-                {{oNew.title}}
-            </h1>
-        </main>
+    <section>
+        <app-hero-banner [title]="oNew.title" [backgroundImage]="'bg-new-hero'" />
     </section>
 
     <section class="section-container lg:!px-48">

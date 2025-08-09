@@ -34,6 +34,10 @@
   --color-blog-description: #667082;
   --bg-home-hero-m: url('/images/home-hero-m.png');
   --bg-home-hero-d: url('/images/home-hero-d.png');
+  --bg-blog-hero-m: url('/images/resource-hero-m.png');
+  --bg-blog-hero-d: url('/images/blog-hero-d.png');
+  --bg-new-hero-m: url('/images/resource-hero-m.png');
+  --bg-new-hero-d: url('/images/new-hero-d.png');
 }
 
 body {
@@ -44,9 +48,25 @@ body {
   background-image: var(--bg-home-hero-m);
 }
 
+.bg-blog-hero {
+  background-image: var(--bg-blog-hero-m);
+}
+
+.bg-new-hero {
+  background-image: var(--bg-new-hero-m);
+}
+
 @media screen and (min-width: 1024px) {
   .bg-home-hero {
     background-image: var(--bg-home-hero-d);
+  }
+
+  .bg-blog-hero {
+    background-image: var(--bg-blog-hero-d);
+  }
+
+  .bg-new-hero {
+    background-image: var(--bg-new-hero-d);
   }
 }
 

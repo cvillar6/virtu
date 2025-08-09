@@ -9,8 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class HeroBanner {
   @Input() title!: string;
-  @Input() subtitle!: string;
-  @Input() description!: string;
-  @Input() backgroundImage!: string;
+  @Input() subtitle?: string;
+  @Input() description?: string;
+  @Input() backgroundImage?: string;
   @Input() displayButton: boolean = false;
 }

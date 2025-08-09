@@ -1,25 +1,7 @@
 <main>
-    <section class="bg-hero-section py-20 lg:py-24">
-        <main class="section-container bg-white relative lg:py-40">
-            <div class="max-w-5xl relative z-10">
-
-                <div class="mb-14">
-                    <p class="text-2xl text-subtitle lg:text-6xl lg:font-light">Get in Touch with</p>
-                    <h1 class="text-5xl text-subtitle lg:text-7xl">
-                        Virtu Medical
-                    </h1>
-                </div>
-                <p class="text-base leading-7 lg:text-2xl lg:leading-9">
-                    Have questions or need more information? We're here to help. Reach out to our team for personalized
-                    support and learn how Virtu Medical can transform your healthcare operations.
-                </p>
-            </div>
-
-            <img src="images/contact-us-m.svg" alt="Contact Us" class="absolute top-0 right-0 h-full z-0 lg:hidden"
-                loading="lazy">
-            <img src="images/contact-us-d.svg" alt="Contact Us"
-                class="hidden lg:block absolute top-0 right-0 h-full z-0" loading="lazy">
-        </main>
+    <section>
+        <app-hero-banner [title]="'Virtu Medical'" [subtitle]="'Get in Touch with Us'"
+            [description]="'Have questions or need more information? We\'re here to help. Reach out to our team for personalized support and learn how Virtu Medical can transform your healthcare operations.'" />
     </section>
 
     <section class="lg:flex">

@@ -4,12 +4,13 @@ import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 import { catchError, map, Observable, of, tap } from 'rxjs';
 import { Strapi } from '../../../services/strapi';
 import { ContactUs } from '../../components/contact-us/contact-us';
+import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { New } from '../../components/new/new';
 import { INew } from '../../interfaces/new';
 
 @Component({
   selector: 'app-news-page',
-  imports: [CommonModule, PaginatorModule, ContactUs, New],
+  imports: [HeroBanner, CommonModule, PaginatorModule, ContactUs, New],
   templateUrl: './news-page.html',
   styleUrl: './news-page.css'
 })

@@ -4,12 +4,13 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
 import { Strapi } from '../../../services/strapi';
 import { DynamicContent } from '../../components/dynamic-content/dynamic-content';
+import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { New } from '../../components/new/new';
 import { INew } from '../../interfaces/new';
 
 @Component({
   selector: 'app-new-page',
-  imports: [CommonModule, DynamicContent, New],
+  imports: [HeroBanner, CommonModule, DynamicContent, New],
   templateUrl: './new-page.html',
   styleUrl: './new-page.css'
 })

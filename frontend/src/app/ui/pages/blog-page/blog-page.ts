@@ -5,11 +5,12 @@ import { catchError, map, Observable, of, switchMap } from 'rxjs';
 import { Strapi } from '../../../services/strapi';
 import { Blog } from '../../components/blog/blog';
 import { DynamicContent } from '../../components/dynamic-content/dynamic-content';
+import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { IBlog } from '../../interfaces/blog';
 
 @Component({
   selector: 'app-blog-page',
-  imports: [CommonModule, DynamicContent, Blog],
+  imports: [HeroBanner, CommonModule, DynamicContent, Blog],
   templateUrl: './blog-page.html',
   styleUrl: './blog-page.css'
 })

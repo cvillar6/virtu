@@ -1,18 +1,7 @@
 <main>
-    <section class="bg-hero-section py-20 lg:py-24">
-        <main class="section-container bg-white relative lg:py-40">
-            <div class="max-w-5xl relative z-10">
-                <p class="text-2xl text-subtitle lg:text-6xl lg:font-light">Revolutionizing Healthcare with</p>
-                <h1 class="text-5xl text-subtitle lg:text-7xl">
-                    Personalized, Data-Driven Solutions
-                </h1>
-            </div>
-
-            <img src="images/contact-us-m.svg" alt="Contact Us" class="absolute top-0 right-0 h-full lg:hidden z-0"
-                loading="lazy">
-            <img src="images/contact-us-d.svg" alt="Contact Us"
-                class="hidden lg:block absolute top-0 right-0 h-full z-0" loading="lazy">
-        </main>
+    <section>
+        <app-hero-banner [title]="'Personalized, Data-Driven Solutions'"
+            [subtitle]="'Revolutionizing Healthcare with'" />
     </section>
 
     <section class="section-container">
@@ -25,7 +14,8 @@
                     About Us
                 </h2>
                 <p class="text-xl text-subtitle mb-6">
-                    With over 17 years of experience in creating, developing, and managing complex IT architecture and
+                    With over 17 years of experience in creating, developing, and managing complex IT
+                    architecture and
                     relational database systems, Virtu Medical is at the forefront of healthcare technology. We
                     specialize
                     in providing comprehensive IT solutions designed specifically for the healthcare industry,
@@ -33,8 +23,10 @@
                     organizations to manage patient care more efficiently.
                 </p>
                 <p class="text-xl text-subtitle mb-6">
-                    Our extensive expertise spans across managed care, including finance, physician risk modeling,
-                    analytics, operations management, financial underwriting, payment processing, revenue and cost
+                    Our extensive expertise spans across managed care, including finance, physician risk
+                    modeling,
+                    analytics, operations management, financial underwriting, payment processing, revenue and
+                    cost
                     reconciliation systems, and complex data integration.
                 </p>
 
@@ -66,9 +58,9 @@
             Meet our Leadership
         </h2>
 
-        <ul class="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:justify-center">
+        <ul class="flex flex-col gap-4  lg:grid lg:grid-cols-2">
             @for (avatar of avatars; track avatar.name) {
-            <li class="lg:w-[calc(48%)]">
+            <li>
                 <app-avatar [avatar]="avatar"></app-avatar>
             </li>
             }

@@ -5,12 +5,13 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Strapi } from '../../../services/strapi';
 import { ContactUs } from '../../components/contact-us/contact-us';
+import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { Usecase } from '../../components/usecase/usecase';
 import { IUsecase } from '../../interfaces/usecase';
 
 @Component({
   selector: 'app-usecases-page',
-  imports: [CommonModule, PaginatorModule, ContactUs, Usecase],
+  imports: [HeroBanner, CommonModule, PaginatorModule, ContactUs, Usecase],
   templateUrl: './usecases-page.html',
   styleUrl: './usecases-page.css'
 })

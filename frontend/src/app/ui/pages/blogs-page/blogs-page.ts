@@ -5,11 +5,12 @@ import { catchError, map, Observable, of, tap } from 'rxjs';
 import { Strapi } from '../../../services/strapi';
 import { Blog } from '../../components/blog/blog';
 import { ContactUs } from '../../components/contact-us/contact-us';
+import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { IBlog } from '../../interfaces/blog';
 
 @Component({
   selector: 'app-blogs-page',
-  imports: [PaginatorModule, ContactUs, CommonModule, Blog],
+  imports: [HeroBanner, PaginatorModule, ContactUs, CommonModule, Blog],
   templateUrl: './blogs-page.html',
   styleUrl: './blogs-page.css'
 })
