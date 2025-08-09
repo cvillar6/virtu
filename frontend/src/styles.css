@@ -74,6 +74,10 @@ body {
   @apply px-4 py-10 lg:px-24 lg:py-20;
 }
 
+.menu-link {
+  @apply text-base text-footer hover:text-primary hover:underline hover:font-semibold;
+}
+
 .primary-button {
   @apply bg-primary text-button px-8 py-4 rounded-full text-xl font-semibold border-button-text;
 }

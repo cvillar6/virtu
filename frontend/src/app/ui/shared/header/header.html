@@ -2,28 +2,127 @@
 <header class="lg:hidden">
     <p-accordion value="0">
         <p-accordion-panel value="1">
-            <p-accordion-header>
+            <p-accordion-header class="shadow">
                 <img src="images/virtu-m.svg" alt="virtu">
                 <ng-template #toggleicon let-active="active">
                     @if (active) {
-                    <i class="pi pi-times" style="font-size: 2rem;"></i>
+                    <i class="pi pi-times text-4xl text-primary"></i>
                     } @else {
-                    <i class="pi pi-bars" style="font-size: 2rem;"></i>
+                    <i class="pi pi-bars text-4xl text-primary"></i>
                     }
                 </ng-template>
             </p-accordion-header>
-            <p-accordion-content>
-                <p class="m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                    ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                    anim id est
-                    laborum.
-                </p>
+            <p-accordion-content class="p-0">
+                <ul class="px-4 py-6">
+                    <li class="px-3 py-4 border-b border-border">
+                        <a class="menu-link" routerLink="/">
+                            Home
+                        </a>
+                    </li>
+                    <li class="px-3 py-4 border-b border-border">
+                        <p-accordion value="0">
+                            <p-accordion-panel value="1" class="border-none">
+                                <p-accordion-header class="p-0 font-normal menu-link">
+                                    Solutions
+                                </p-accordion-header>
+                                <p-accordion-content>
+                                    <ul class="px-4 pt-4">
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/">
+                                                Analytics portal
+                                            </a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/">
+                                                Imaging
+                                            </a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/">
+                                                Hospitalization
+                                            </a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/">
+                                                Referral Managements
+                                            </a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/">
+                                                Patient Outreach
+                                            </a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/">
+                                                Disenrollments
+                                            </a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/">
+                                                Transportation
+                                            </a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/">
+                                                EHR
+                                            </a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/">
+                                                Patient Mobile App
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </p-accordion-content>
+                            </p-accordion-panel>
+
+                        </p-accordion>
+                    </li>
+                    <li class="px-3 py-4 border-b border-border">
+                        <a class="menu-link" href="">
+                            Industries
+                        </a>
+                    </li>
+                    <li class="px-3 py-4 border-b border-border">
+                        <a class="menu-link" routerLink="/about-us">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="px-3 py-4 mb-8">
+                        <p-accordion value="0">
+                            <p-accordion-panel value="1" class="border-none">
+                                <p-accordion-header class="p-0 font-normal menu-link">
+                                    Resources
+                                </p-accordion-header>
+                                <p-accordion-content>
+                                    <ul class="px-4 pt-4">
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/blogs">
+                                                Blogs
+                                            </a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/usecases">
+                                                Case Studies
+                                            </a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a class="menu-link" routerLink="/news">
+                                                News
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </p-accordion-content>
+                            </p-accordion-panel>
+                        </p-accordion>
+                    </li>
+                    <li>
+                        <a class="primary-button block w-full text-center cursor-pointer rounded-lg!"
+                            routerLink="/contact-us">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
             </p-accordion-content>
         </p-accordion-panel>
     </p-accordion>

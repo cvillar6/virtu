@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { AccordionModule } from 'primeng/accordion';
 import { MegaMenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
@@ -6,7 +7,7 @@ import { MegaMenuModule } from 'primeng/megamenu';
 
 @Component({
   selector: 'app-header',
-  imports: [AccordionModule, MegaMenuModule, ButtonModule],
+  imports: [AccordionModule, MegaMenuModule, ButtonModule, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
@@ -78,4 +79,5 @@ export class Header implements OnInit {
       },
     ];
   }
+
 }
