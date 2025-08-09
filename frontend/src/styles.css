@@ -32,14 +32,26 @@
   --color-paginator-selected: #1B3E7E;
   --color-blog-title: #121417;
   --color-blog-description: #667082;
+  --bg-home-hero-m: url('/images/home-hero-m.png');
+  --bg-home-hero-d: url('/images/home-hero-d.png');
 }
 
 body {
   font-family: var(--font-primary);
 }
 
+.bg-home-hero {
+  background-image: var(--bg-home-hero-m);
+}
+
+@media screen and (min-width: 1024px) {
+  .bg-home-hero {
+    background-image: var(--bg-home-hero-d);
+  }
+}
+
 .section-container {
-  @apply px-4 py-14 lg:px-24 lg:py-20;
+  @apply px-4 py-10 lg:px-24 lg:py-20;
 }
 
 .primary-button {
