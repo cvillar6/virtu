@@ -57,3 +57,9 @@
 ::ng-deep .p-megamenu-root-list {
     justify-content: flex-end;
 }
+
+::ng-deep .p-megamenu-item-link-active {
+    color: #1B3E7E;
+    font-weight: 600;
+    text-decoration-line: underline;
+}

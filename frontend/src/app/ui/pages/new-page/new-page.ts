@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
+import { INewResponse } from '../../../services/interfaces/new-response';
 import { Strapi } from '../../../services/strapi';
 import { DynamicContent } from '../../components/dynamic-content/dynamic-content';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
@@ -37,21 +38,40 @@ export class NewPage {
     })
   );
 
-  relatedNews$: Observable<INew[]> = this.strapi.getContentType('news').pipe(
+  relatedNews$: Observable<INewResponse> = this.strapi.getContentType('news', { page: 1, pageCount: 0, pageSize: 3, total: 0 }).pipe(
     map((response) => {
       if (response.data && response.data.length > 0) {
-        return response.data.map((oNew: any) => ({
-          documentID: oNew.documentId,
-          title: oNew.Title,
-          description: oNew.Description,
-          image: oNew.Image.url,
-          content: oNew.Content,
-        }));
+        return {
+          data: response.data.map((oNew: any) => ({
+            documentID: oNew.documentId,
+            title: oNew.Title,
+            description: oNew.Description,
+            image: oNew.Image.url,
+            content: oNew.Content,
+          })),
+          meta: response.meta.pagination
+        };
       }
-      return [];
+      return {
+        data: [],
+        meta: {
+          page: 1,
+          pageCount: 0,
+          pageSize: 3,
+          total: 0
+        }
+      };
     }),
     catchError(() => {
-      return of([]);
+      return of({
+        data: [],
+        meta: {
+          page: 1,
+          pageCount: 0,
+          pageSize: 3,
+          total: 0
+        }
+      });
     })
   );
 }

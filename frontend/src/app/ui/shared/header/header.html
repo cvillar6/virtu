@@ -3,7 +3,9 @@
     <p-accordion value="0">
         <p-accordion-panel value="1">
             <p-accordion-header class="shadow">
-                <img src="images/virtu.svg" alt="virtu">
+                <a routerLink="/">
+                    <img src="images/logo.png" class="w-36" alt="virtu">
+                </a>
                 <ng-template #toggleicon let-active="active">
                     @if (active) {
                     <i class="pi pi-times text-4xl text-primary"></i>
@@ -132,7 +134,9 @@
 <header class="hidden lg:block">
     <p-megamenu [model]="items" class="px-14 py-4 justify-between flex-1 border-none gap-8">
         <ng-template #start>
-            <img src="images/logo.png" class="w-52" alt="virtu">
+            <a routerLink="/">
+                <img src="images/logo.png" class="w-52" alt="virtu">
+            </a>
         </ng-template>
         <ng-template #end>
             <a class="primary-button rounded-lg! text-base! px-5! py-2! " routerLink="/contact-us">

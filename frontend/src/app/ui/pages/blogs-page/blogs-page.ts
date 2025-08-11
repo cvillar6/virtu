@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, WritableSignal } from '@angular/core';
+import { toObservable } from '@angular/core/rxjs-interop';
 import { PaginatorModule, PaginatorState } from 'primeng/paginator';
-import { catchError, map, Observable, of, tap } from 'rxjs';
+import { catchError, map, Observable, of, switchMap } from 'rxjs';
+import { IBlogResponse } from '../../../services/interfaces/blog-response';
+import { IPagination } from '../../../services/interfaces/pagination';
 import { Strapi } from '../../../services/strapi';
 import { Blog } from '../../components/blog/blog';
 import { ContactUs } from '../../components/contact-us/contact-us';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
-import { IBlog } from '../../interfaces/blog';
 
 @Component({
   selector: 'app-blogs-page',
@@ -17,31 +19,55 @@ import { IBlog } from '../../interfaces/blog';
 export class BlogsPage {
   private strapiService = inject(Strapi);
 
-  first: number = 0;
-  rows: number = 10;
+  first: number = 1;
+  rows: number = 6;
 
-  blogs: Observable<IBlog[]> = this.strapiService.getContentType('blogs').pipe(
-    map((response) => {
-      if (response.data && response.data.length > 0) {
-        return response.data.map((blog: any) => ({
-          documentID: blog.documentId,
-          title: blog.Title,
-          description: blog.Description,
-          image: blog.Image.url,
-          content: blog.Content,
-        }));
-      }
-      return [];
-    }),
-    catchError(() => {
-      return of([]);
-    }),
-    tap((blogs) => console.log(blogs))
-  );
+  pagination: WritableSignal<IPagination> = signal({
+    page: 1,
+    pageCount: 0,
+    pageSize: 6,
+    total: 0
+  });
+
+  blogs$: Observable<IBlogResponse> = toObservable(this.pagination).pipe(
+    switchMap((pagination) =>
+      this.strapiService.getContentType('blogs', pagination).pipe(
+        map((response) => {
+          if (response.data && response.data.length > 0) {
+            return {
+              data: response.data.map((blog: any) => ({
+                documentID: blog.documentId,
+                title: blog.Title,
+                description: blog.Description,
+                image: blog.Image.url,
+                content: blog.Content,
+              })),
+              meta: response.meta.pagination
+            };
+          }
+          return {
+            data: [],
+            meta: pagination
+          };
+        }),
+        catchError(() => {
+          return of({
+            data: [],
+            meta: pagination
+          });
+        }),
+      )
+    )
+  )
+
 
   onPageChange(event: PaginatorState) {
-    this.first = event.first ?? 0;
-    this.rows = event.rows ?? 10;
+    this.pagination.set({
+      page: (event.page ?? 1) + 1,
+      pageCount: event.pageCount ?? 0,
+      pageSize: event.rows ?? 10,
+      total: 0
+    });
   }
 
 }

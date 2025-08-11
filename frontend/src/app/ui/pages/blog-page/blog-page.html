@@ -15,7 +15,7 @@
 
         @if (relatedBlogs$ | async; as relatedBlogs) {
         <ul class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-4">
-            @for (blog of relatedBlogs; track blog.documentID) {
+            @for (blog of relatedBlogs.data; track blog.documentID) {
             <li>
                 <app-blog [blog]="blog" />
             </li>

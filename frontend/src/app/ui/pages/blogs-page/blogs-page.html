@@ -4,7 +4,7 @@
             [description]="'Explore our collection of blogs, case studies, and whitepapers to stay informed on the latest healthcare trends, best practices, and innovative solutions. Whether you\'re looking for expert advice or in-depth analysis, our resources are here to guide you in navigating the evolving landscape of healthcare technology.'" />
     </section>
 
-    @if (blogs | async; as blogs) {
+    @if (blogs$ | async; as blogs) {
     <section class="section-container">
         <div class="mb-8 lg:flex lg:justify-between lg:items-center lg:mb-16">
             <h2 class="text-3xl text-subtitle mb-4 lg:mb-0 lg:text-5xl">
@@ -12,14 +12,14 @@
             </h2>
 
             <p class="text-2xl text-description">
-                {{ blogs.length }} results
+                {{ blogs.meta.total }} results
             </p>
         </div>
 
         <div>
             <div class="mb-8 lg:mb-16">
                 <ul class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-4">
-                    @for (blog of blogs; track blog.documentID) {
+                    @for (blog of blogs.data; track blog.documentID) {
                     <li>
                         <app-blog [blog]="blog" />
                     </li>
@@ -28,8 +28,8 @@
             </div>
 
 
-            <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="50"
-                [showFirstLastIcon]="false" class="p-0">
+            <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows"
+                [totalRecords]="blogs.meta.total" [showFirstLastIcon]="false" class="p-0">
                 <ng-template pTemplate="previouspagelinkicon">
                     <i class="pi pi-arrow-left"></i>
                 </ng-template>

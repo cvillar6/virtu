@@ -15,7 +15,7 @@
 
         @if (relatedNews$ | async; as relatedNews) {
         <ul class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-4">
-            @for (oNew of relatedNews; track oNew.documentID) {
+            @for (oNew of relatedNews.data; track oNew.documentID) {
             <li>
                 <app-new [oNew]="oNew" />
             </li>

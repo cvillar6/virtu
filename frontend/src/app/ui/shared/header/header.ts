@@ -20,6 +20,7 @@ export class Header implements OnInit {
       {
         label: 'Home',
         routerLink: '/',
+        routerLinkActiveOptions: { exact: true },
       },
       {
         label: 'Solutions',
@@ -48,6 +49,7 @@ export class Header implements OnInit {
       {
         label: 'About Us',
         routerLink: '/about-us',
+        routerLinkActiveOptions: { exact: true },
       },
       {
         label: 'Resources',
@@ -56,9 +58,9 @@ export class Header implements OnInit {
             {
               label: 'Resources',
               items: [
-                { label: 'Blogs', routerLink: '/blogs' },
-                { label: 'Case Studies', routerLink: '/usecases' },
-                { label: 'News', routerLink: '/news' }
+                { label: 'Blogs', routerLink: '/blogs', routerLinkActiveOptions: { exact: true } },
+                { label: 'Case Studies', routerLink: '/usecases', routerLinkActiveOptions: { exact: true } },
+                { label: 'News', routerLink: '/news', routerLinkActiveOptions: { exact: true } }
               ]
             }
           ],

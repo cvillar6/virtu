@@ -7,6 +7,7 @@ import { Blog } from '../../components/blog/blog';
 import { DynamicContent } from '../../components/dynamic-content/dynamic-content';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { IBlog } from '../../interfaces/blog';
+import { IBlogResponse } from '../../../services/interfaces/blog-response';
 
 @Component({
   selector: 'app-blog-page',
@@ -37,21 +38,40 @@ export class BlogPage {
     })
   );
 
-  relatedBlogs$: Observable<IBlog[]> = this.strapi.getContentType('blogs').pipe(
+  relatedBlogs$: Observable<IBlogResponse> = this.strapi.getContentType('blogs', { page: 1, pageCount: 0, pageSize: 3, total: 0 }).pipe(
     map((response) => {
       if (response.data && response.data.length > 0) {
-        return response.data.map((blog: any) => ({
-          documentID: blog.documentId,
-          title: blog.Title,
-          description: blog.Description,
-          image: blog.Image.url,
-          content: blog.Content,
-        }));
+        return {
+          data: response.data.map((blog: any) => ({
+            documentID: blog.documentId,
+            title: blog.Title,
+            description: blog.Description,
+            image: blog.Image.url,
+            content: blog.Content,
+          })),
+          meta: response.meta
+        };
       }
-      return [];
+      return {
+        data: [],
+        meta: {
+          page: 1,
+          pageCount: 0,
+          pageSize: 3,
+          total: 0
+        }
+      };
     }),
     catchError(() => {
-      return of([]);
+      return of({
+        data: [],
+        meta: {
+          page: 1,
+          pageCount: 0,
+          pageSize: 3,
+          total: 0
+        }
+      });
     })
   );
 }
