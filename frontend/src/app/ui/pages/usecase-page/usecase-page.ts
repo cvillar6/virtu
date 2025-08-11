@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
+import { IUsecaseResponse } from '../../../services/interfaces/usecase-response';
 import { Strapi } from '../../../services/strapi';
 import { DynamicContent } from '../../components/dynamic-content/dynamic-content';
 import { Usecase } from '../../components/usecase/usecase';
@@ -47,22 +48,41 @@ export class UsecasePage {
     })
   );
 
-  relatedUsecases$: Observable<IUsecase[]> = this.strapi.getContentType('usecases').pipe(
+  relatedUsecases$: Observable<IUsecaseResponse> = this.strapi.getContentType('usecases', { page: 1, pageCount: 0, pageSize: 3, total: 0 }).pipe(
     map((response) => {
       if (response.data && response.data.length > 0) {
-        return response.data.map((usecase: any) => ({
-          documentID: usecase.documentId,
-          title: usecase.Title,
-          description: usecase.Description,
-          image: usecase.Image.url,
-          content: usecase.Content,
-          extendedDescription: usecase.ExtendedDescription,
-        }));
+        return {
+          data: response.data.map((usecase: any) => ({
+            documentID: usecase.documentId,
+            title: usecase.Title,
+            description: usecase.Description,
+            image: usecase.Image.url,
+            content: usecase.Content,
+            extendedDescription: usecase.ExtendedDescription,
+          })),
+          meta: response.meta.pagination
+        };
       }
-      return [];
+      return {
+        data: [],
+        meta: {
+          page: 1,
+          pageCount: 0,
+          pageSize: 3,
+          total: 0
+        }
+      };
     }),
     catchError(() => {
-      return of([]);
+      return of({
+        data: [],
+        meta: {
+          page: 1,
+          pageCount: 0,
+          pageSize: 3,
+          total: 0
+        }
+      });
     })
   );
 }

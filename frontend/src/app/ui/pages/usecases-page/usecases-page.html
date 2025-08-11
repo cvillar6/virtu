@@ -12,14 +12,14 @@
             </h2>
 
             <p class="text-2xl text-description">
-                {{ usecases.length }} results
+                {{ usecases.meta.total }} results
             </p>
         </div>
 
         <div>
             <div class="mb-8 lg:mb-16">
                 <ul class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-4">
-                    @for (usecase of usecases; track usecase.documentID) {
+                    @for (usecase of usecases.data; track usecase.documentID) {
                     <li>
                         <app-usecase [usecase]="usecase" />
                     </li>
@@ -28,8 +28,8 @@
             </div>
 
 
-            <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="50"
-                [showFirstLastIcon]="false" class="p-0">
+            <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows"
+                [totalRecords]="usecases.meta.total" [showFirstLastIcon]="false" class="p-0">
                 <ng-template pTemplate="previouspagelinkicon">
                     <i class="pi pi-arrow-left"></i>
                 </ng-template>
