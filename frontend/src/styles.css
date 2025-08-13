@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter Font/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('/virtu/fonts/Inter Font/Inter-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -32,12 +32,12 @@
   --color-paginator-selected: #1B3E7E;
   --color-blog-title: #121417;
   --color-blog-description: #667082;
-  --bg-home-hero-m: url('/images/home-hero-m.png');
-  --bg-home-hero-d: url('/images/home-hero-d.png');
-  --bg-blog-hero-m: url('/images/resource-hero-m.png');
-  --bg-blog-hero-d: url('/images/blog-hero-d.png');
-  --bg-new-hero-m: url('/images/resource-hero-m.png');
-  --bg-new-hero-d: url('/images/new-hero-d.png');
+  --bg-home-hero-m: url('/virtu/images/home-hero-m.png');
+  --bg-home-hero-d: url('/virtu/images/home-hero-d.png');
+  --bg-blog-hero-m: url('/virtu/images/resource-hero-m.png');
+  --bg-blog-hero-d: url('/virtu/images/blog-hero-d.png');
+  --bg-new-hero-m: url('/virtu/images/resource-hero-m.png');
+  --bg-new-hero-d: url('/virtu/images/new-hero-d.png');
 }
 
 body {
