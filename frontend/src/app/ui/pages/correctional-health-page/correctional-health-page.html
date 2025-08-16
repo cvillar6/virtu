@@ -1,0 +1,130 @@
+<main>
+    <section>
+        <app-hero-banner [title]="'Correctional Health'" [subtitle]="'EHR Platform for'"
+            [description]="'Built for the realities of correctional care. Designed for the people delivering it. \n\nVirtu’s Electronic Health Record (EHR) platform is purpose-built for correctional facilities—giving clinicians, administrators, and support staff a powerful system designed to meet the unique demands of incarcerated care.'" />
+    </section>
+
+    <section class="section-container bg-section">
+        <p class="text-xl text-white leading-8 mb-6">
+            From intake through community reintegration, every workflow is tailored to help custody-based
+            teams deliver continuous, high-quality care—even in low-resource or high-security
+            environments.
+        </p>
+        <p class="text-xl text-white leading-8">
+            Whether you're documenting intake screenings, administering medications, managing
+            behavioral health cases, or coordinating discharge planning, Virtu’s secure, interoperable
+            system connects every step of the patient journey—bringing clarity, speed, and accountability to
+            every encounter.
+        </p>
+    </section>
+
+    <section class="section-container bg-footer">
+        <h2 class="text-3xl text-white text-center mb-14">
+            What You'll Gain
+        </h2>
+
+        <ul class="flex flex-col gap-4 lg:grid lg:grid-cols-2">
+            @for (feature of features; track feature.title) {
+            <li>
+                <app-core-value [coreValue]="feature" [tiny]="true"></app-core-value>
+            </li>
+            }
+        </ul>
+    </section>
+
+    <section class="section-container bg-contact-us">
+        <div class="lg:rounded-4xl lg:shadow-lg lg:p-8">
+            <h2 class="text-3xl text-title text-center mb-14">
+                Key Features
+            </h2>
+
+            <ul class="flex flex-col gap-4 lg:grid lg:grid-cols-2">
+                @for (keyFeature of keyFeatures; track keyFeature.title) {
+                <li>
+                    <app-key-feature [keyFeature]="keyFeature"></app-key-feature>
+                </li>
+                }
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <h2 class="text-3xl text-title text-center mb-14">
+            Proven Impact
+        </h2>
+
+        <ul class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 lg:grid lg:grid-cols-2">
+                <li class="bg-button rounded-xl p-8">
+                    <p class="text-xl text-title leading-8 mb-7">
+                        “We’ve gone from no records and/or limited paper-based processes to a streamlined digital
+                        workflow.
+                        The
+                        time savings and visibility into patient care have been game-changing.
+                    </p>
+
+                    <p class="text-3xl text-title mb-2">
+                        Facility Nurse Manager
+                    </p>
+
+                    <p class="text-xl text-description leading-8">
+                        Cap Haitian Prison
+                    </p>
+                </li>
+
+                <li class="bg-proven-impact rounded-xl p-8">
+                    <p class="text-xl text-title leading-8 mb-7">
+                        This system has dramatically reduced the time it takes for our team to document and access
+                        patient
+                        information, especially during intake. We now understand the health needs of our population with
+                        greater clarity.”
+                    </p>
+
+                    <p class="text-3xl text-title mb-2">
+                        Program Director,
+                    </p>
+
+                    <p class="text-xl text-description leading-8">
+                        La Victoria Correctional Facility
+                    </p>
+                </li>
+            </div>
+
+            <div class="flex flex-col gap-4 lg:grid lg:grid-cols-3">
+                <li class="flex flex-col justify-center bg-proven-impact rounded-xl p-8">
+                    <p class="text-6xl text-title mb-7">
+                        30%
+                    </p>
+                    <p class="text-4xl text-title">
+                        Reduction in paperwork
+                    </p>
+                </li>
+
+                <li class="flex flex-col justify-center bg-result-card rounded-xl p-8">
+                    <p class="text-6xl text-title mb-7">
+                        40%
+                    </p>
+                    <p class="text-4xl text-title">
+                        Faster care handoffs
+                    </p>
+                </li>
+
+                <li class="flex flex-col justify-center bg-button rounded-xl p-8">
+                    <p class="text-4xl text-title">
+                        Up to
+                    </p>
+                    <p class="text-6xl text-title mb-7">
+                        1 hr
+                    </p>
+                    <p class="text-4xl text-title">
+                        Saved per shift by nursing teams
+                    </p>
+                </li>
+            </div>
+        </ul>
+    </section>
+
+    <section class="section-container bg-button">
+        <app-book-demo [bookDemo]="bookDemo" />
+    </section>
+</main>
