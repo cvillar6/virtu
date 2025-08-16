@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { IPagination } from './interfaces/pagination';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +19,8 @@ export class Strapi {
     });
   }
 
-  getContentType(contentType: string): Observable<any> {
-    return this.http.get(`${this.apiURL}/api/${contentType}?populate=*`, { headers: this.getHeaders() });
+  getContentType(contentType: string, pagination?: IPagination): Observable<any> {
+    return this.http.get(`${this.apiURL}/api/${contentType}?populate=*&pagination[page]=${pagination?.page ?? 1}&pagination[pageSize]=${pagination?.pageSize ?? 10}&pagination[total]=${pagination?.total ?? 0}`, { headers: this.getHeaders() });
   }
 
   getSingleItem(contentType: string, id: number, componentsToPopulate?: string[]): Observable<any> {

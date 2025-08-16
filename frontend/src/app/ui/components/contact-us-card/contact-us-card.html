@@ -1,5 +1,7 @@
 <main class="bg-white p-6 rounded-xl">
-    <i class="pi pi-{{ data.icon }} text-5xl mb-4"></i>
+    <div class="mb-4">
+        <img [src]="data.icon" [alt]="data.icon">
+    </div>
     <p class="text-xl text-subtitle mb-3">{{ data.title }}</p>
     <p class="text-2xl text-subtitle font-semibold">{{ data.value }}</p>
 </main>

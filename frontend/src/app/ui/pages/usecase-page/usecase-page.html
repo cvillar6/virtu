@@ -10,8 +10,7 @@
         </p>
 
         <div class="mb-12 lg:mb-14">
-            <img [src]="'http://localhost:1337' + usecase.image" [alt]="usecase.title"
-                class="w-full h-auto cover-image">
+            <img [src]="usecase.image" [alt]="usecase.title" class="w-full h-auto cover-image">
         </div>
 
         <div>
@@ -36,8 +35,7 @@
         </div>
 
         <div class="lg:w-1/2">
-            <img [src]="'http://localhost:1337' + usecase.info.image" [alt]="usecase.info.id"
-                class="w-full h-auto cover-image">
+            <img [src]="usecase.info.image" [alt]="usecase.info.id" class="w-full h-auto cover-image">
         </div>
 
     </section>
@@ -53,7 +51,7 @@
 
         @if (relatedUsecases$ | async; as relatedUsecases) {
         <ul class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-4">
-            @for (usecase of relatedUsecases; track usecase.documentID) {
+            @for (usecase of relatedUsecases.data; track usecase.documentID) {
             <li>
                 <app-usecase [usecase]="usecase" />
             </li>

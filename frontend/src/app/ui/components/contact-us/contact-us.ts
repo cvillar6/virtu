@@ -20,7 +20,7 @@ export class ContactUs implements AfterViewInit {
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: '#666666',
+      color: '#4d4d4d',
       backgroundColor: '#122954',
       points: 20.00,
     })

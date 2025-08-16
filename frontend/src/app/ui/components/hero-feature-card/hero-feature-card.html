@@ -1,9 +1,12 @@
 <main class="py-24 lg:py-0 lg:flex lg:items-center lg:gap-14"
     [ngClass]="{'lg:flex-row-reverse': imagePosition === 'right'}">
-    <div class="mb-10 lg:w-1/2 lg:mb-0">
+    <div class="mb-10 lg:w-1/2 lg:mb-0" pAnimateOnScroll
+        enterClass="animate-enter fade-in-10 zoom-in-10 animate-duration-1000">
         <img [src]="image" alt="Hero Feature" class="w-full h-full object-cover">
     </div>
-    <div class="lg:w-1/2">
+    <div class="lg:w-1/2" pAnimateOnScroll [enterClass]="imagePosition === 'left' 
+        ? 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000' 
+        : 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000'">
         <p class="text-2xl text-title mb-8 lg:text-4xl">
             {{ title }}
         </p>

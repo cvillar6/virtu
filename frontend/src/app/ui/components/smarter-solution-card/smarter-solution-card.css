@@ -1,3 +1,4 @@
 :host {
-    @apply flex h-full;
+    display: block;
+    height: 100%;
 }
