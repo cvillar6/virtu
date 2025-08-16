@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Avatar } from '../../components/avatar/avatar';
 import { CoreValue } from '../../components/core-value/core-value';
@@ -7,7 +8,7 @@ import { ICoreValue } from '../../interfaces/core-value';
 
 @Component({
   selector: 'app-about-us-page',
-  imports: [HeroBanner, CoreValue, Avatar],
+  imports: [HeroBanner, CoreValue, Avatar, CommonModule],
   templateUrl: './about-us-page.html',
   styleUrl: './about-us-page.css'
 })
