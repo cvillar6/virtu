@@ -7,6 +7,7 @@ import { CorrectionalHealthPage } from './ui/pages/correctional-health-page/corr
 import { HomePage } from './ui/pages/home-page/home-page';
 import { NewPage } from './ui/pages/new-page/new-page';
 import { NewsPage } from './ui/pages/news-page/news-page';
+import { PatientAppPage } from './ui/pages/patient-app-page/patient-app-page';
 import { UsecasePage } from './ui/pages/usecase-page/usecase-page';
 import { UsecasesPage } from './ui/pages/usecases-page/usecases-page';
 
@@ -50,6 +51,10 @@ export const routes: Routes = [
     {
         path: 'correctional-health',
         component: CorrectionalHealthPage,
+    },
+    {
+        path: 'patient-app',
+        component: PatientAppPage,
     },
     {
         path: '**',
