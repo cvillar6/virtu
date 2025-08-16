@@ -1,9 +1,9 @@
 <main class="bg-solution-card rounded-xl p-6 h-full">
-    <i [class]="coreValue.icon" class="text-icon text-[56px] mb-7"></i>
-    <h3 class="text-4xl text-white mb-7">
+    <i [class]="coreValue.icon" class="text-icon mb-7" [ngClass]="tiny ? 'text-[32px]' : 'text-[56px]'"></i>
+    <h3 class="text-white mb-7" [ngClass]="tiny ? 'text-2xl' : 'text-4xl'">
         {{coreValue.title}}
     </h3>
-    <p class="text-xl text-white leading-9">
+    <p class="text-white leading-9" [ngClass]="tiny ? 'text-base' : 'text-xl'">
         {{coreValue.description}}
     </p>
 </main>
