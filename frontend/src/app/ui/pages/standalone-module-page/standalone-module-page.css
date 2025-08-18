@@ -1,0 +1,4 @@
+::ng-deep .p-accordionpanel-active {
+    border: 1px solid var(--color-border-accordion);
+    border-radius: 8px;
+}
