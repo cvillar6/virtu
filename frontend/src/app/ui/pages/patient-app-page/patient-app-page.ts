@@ -5,6 +5,7 @@ import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { KeyFeature } from '../../components/key-feature/key-feature';
 import { IBookDemo } from '../../interfaces/book-demo';
 import { ICoreValue } from '../../interfaces/core-value';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 import { IKeyFeature } from '../../interfaces/key-feature';
 
 @Component({
@@ -14,6 +15,12 @@ import { IKeyFeature } from '../../interfaces/key-feature';
   styleUrl: './patient-app-page.css'
 })
 export class PatientAppPage {
+  heroBanner: IHeroBanner = {
+    title: 'Patient App',
+    subtitle: 'Your Health, In Your Hands',
+    description: 'Secure. Intuitive. Always with you.',
+  }
+
   features: ICoreValue[] = [
     {
       title: 'Total Health Visibility',

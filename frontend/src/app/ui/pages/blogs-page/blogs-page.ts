@@ -9,6 +9,7 @@ import { Strapi } from '../../../services/strapi';
 import { Blog } from '../../components/blog/blog';
 import { ContactUs } from '../../components/contact-us/contact-us';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 
 @Component({
   selector: 'app-blogs-page',
@@ -18,6 +19,12 @@ import { HeroBanner } from '../../components/hero-banner/hero-banner';
 })
 export class BlogsPage {
   private strapiService = inject(Strapi);
+
+  heroBanner: IHeroBanner = {
+    title: 'Virtu Medical Resources',
+    subtitle: 'Unlock Insights and Expertise with',
+    description: 'Explore our collection of blogs, case studies, and whitepapers to stay informed on the latest healthcare trends, best practices, and innovative solutions. Whether you\'re looking for expert advice or in-depth analysis, our resources are here to guide you in navigating the evolving landscape of healthcare technology.',
+  }
 
   first: number = 1;
   rows: number = 6;

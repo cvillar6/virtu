@@ -1,7 +1,6 @@
 <main>
     <section>
-        <app-hero-banner [title]="'From Virtu Medical News'" [subtitle]="'Stay Informed with the Latest Updates'"
-            [description]="'Explore timely news updates on healthcare innovation, Virtu Medical announcements, product launches, partnerships, and industry insights.'" />
+        <app-hero-banner [heroBanner]="heroBanner" />
     </section>
 
     @if (news$ | async; as news) {

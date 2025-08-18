@@ -8,6 +8,7 @@ import { DynamicContent } from '../../components/dynamic-content/dynamic-content
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { IBlog } from '../../interfaces/blog';
 import { IBlogResponse } from '../../../services/interfaces/blog-response';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 
 @Component({
   selector: 'app-blog-page',
@@ -18,6 +19,11 @@ import { IBlogResponse } from '../../../services/interfaces/blog-response';
 export class BlogPage {
   private route = inject(ActivatedRoute);
   private strapi = inject(Strapi);
+
+  heroBanner: IHeroBanner = {
+    title: 'Virtu Medical Resources',
+    backgroundImage: 'bg-blog-hero',
+  }
 
   blog$: Observable<IBlog | null> = this.route.params.pipe(
     switchMap((params: Params) => this.strapi.getSingleItem('blogs', params['id'])),

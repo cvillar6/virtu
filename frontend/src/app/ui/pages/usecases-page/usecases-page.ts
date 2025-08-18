@@ -10,6 +10,7 @@ import { Strapi } from '../../../services/strapi';
 import { ContactUs } from '../../components/contact-us/contact-us';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { Usecase } from '../../components/usecase/usecase';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 
 @Component({
   selector: 'app-usecases-page',
@@ -19,6 +20,12 @@ import { Usecase } from '../../components/usecase/usecase';
 })
 export class UsecasesPage {
   private strapiService = inject(Strapi);
+
+  heroBanner: IHeroBanner = {
+    title: 'Real-World Use Cases',
+    subtitle: 'From Virtu Medical',
+    description: 'Explore how Virtu Medical solutions are being implemented across a variety of real-world scenarios. From hospital systems to correctional facilities, discover how our technology empowers providers, enhances outcomes, and improves patient care on the ground.',
+  }
 
   first: number = 1;
   rows: number = 6;

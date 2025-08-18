@@ -1,7 +1,7 @@
 <main>
     @if (new$ | async; as oNew) {
     <section>
-        <app-hero-banner [title]="oNew.title" [backgroundImage]="'bg-new-hero'" />
+        <app-hero-banner [heroBanner]="heroBanner" />
     </section>
 
     <section class="section-container lg:!px-48">

@@ -1,23 +1,24 @@
 <main class="bg-hero-section section-container px-0!">
-    <div class="px-4 py-40 relative bg-white bg-cover bg-center bg-no-repeat lg:px-24" [ngClass]="backgroundImage">
+    <div class="px-4 py-40 relative bg-white bg-cover bg-center bg-no-repeat lg:px-24"
+        [ngClass]="heroBanner.backgroundImage">
         <div class="max-w-5xl relative z-10">
-            @if (subtitle) {
+            @if (heroBanner.subtitle) {
             <p class="text-2xl lg:text-5xl lg:text-left"
-                [ngClass]="backgroundImage ? 'text-white text-center' : 'text-subtitle'">
-                {{subtitle}}
+                [ngClass]="heroBanner.backgroundImage ? 'text-white text-center' : 'text-subtitle'">
+                {{heroBanner.subtitle}}
             </p>
             }
             <h1 class="text-5xl lg:text-6xl lg:text-left"
-                [ngClass]="backgroundImage ? 'text-white text-center' : 'text-subtitle'">
-                {{title }}
+                [ngClass]="heroBanner.backgroundImage ? 'text-white text-center' : 'text-subtitle'">
+                {{heroBanner.title }}
             </h1>
-            @if (description) {
+            @if (heroBanner.description) {
             <p class="text-xl mt-6 whitespace-pre-line lg:text-2xl lg:text-left lg:mt-14"
-                [ngClass]="backgroundImage ? 'text-white text-center' : 'text-subtitle'">
-                {{description}}
+                [ngClass]="heroBanner.backgroundImage ? 'text-white text-center' : 'text-subtitle'">
+                {{heroBanner.description}}
             </p>
             }
-            @if (displayButton) {
+            @if (heroBanner.displayButton) {
             <div class="flex justify-center mt-6 lg:mt-14 lg:justify-start">
                 <button class="primary-button">
                     Request a Demo Today
@@ -26,7 +27,7 @@
             }
         </div>
 
-        @if (!backgroundImage) {
+        @if (!heroBanner.backgroundImage) {
         <img src="images/contact-us-m.svg" alt="Contact Us" class="absolute top-0 right-0 h-full lg:hidden z-0"
             loading="lazy">
         <img src="images/contact-us-d.svg" alt="Contact Us" class="hidden lg:block absolute top-0 right-0 h-full z-0"
