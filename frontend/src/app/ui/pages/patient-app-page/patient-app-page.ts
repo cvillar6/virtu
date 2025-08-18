@@ -19,6 +19,7 @@ export class PatientAppPage {
     title: 'Patient App',
     subtitle: 'Your Health, In Your Hands',
     description: 'Secure. Intuitive. Always with you.',
+    video: 'videos/patient-app.mp4',
   }
 
   features: ICoreValue[] = [
