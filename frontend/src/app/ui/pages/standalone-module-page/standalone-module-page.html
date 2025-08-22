@@ -1,7 +1,7 @@
 <main>
     @if (standaloneModule$ | async; as standaloneModule) {
     <section>
-        <app-hero-banner [title]="standaloneModule.heroBanner.title" />
+        <app-hero-banner [heroBanner]="standaloneModule.heroBanner" />
     </section>
 
     <section class="section-container bg-footer">
@@ -9,13 +9,18 @@
             What You'll Gain
         </h2>
 
-        <div>
-            <div class="hidden lg:block">
-                <img src="" alt="">
+        <div class="lg:grid lg:grid-cols-5 lg:gap-12">
+            <div class="hidden lg:flex lg:col-span-2 lg:items-center">
+                @if (activePanel) {
+                <img [src]="'images/' + standaloneModule.id + '-' + activePanel + '.svg'" alt="">
+                } @else {
+                <img [src]="'images/' + standaloneModule.id + '-' + 0 + '.svg'" alt="">
+                }
             </div>
 
-            <ul class="flex flex-col gap-4">
-                <p-accordion>
+
+            <ul class=" flex flex-col gap-4 lg:col-span-3">
+                <p-accordion [(value)]="activePanel">
                     @for (feature of standaloneModule.moduleFeatures; track $index) {
                     <p-accordion-panel class="border-border-accordion px-5 py-6" [value]="$index">
                         <p-accordion-header class="bg-footer text-xl text-white font-semibold p-0">{{ feature.title

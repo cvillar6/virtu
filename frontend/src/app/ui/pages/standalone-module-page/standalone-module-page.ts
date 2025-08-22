@@ -19,6 +19,8 @@ export class StandaloneModulePage {
   private standaloneModule = inject(StandaloneModule);
   private activatedRoute = inject(ActivatedRoute);
 
+  activePanel: number = 0;
+
   standaloneModule$: Observable<IStandaloneModule | undefined> = this.activatedRoute.params.pipe(
     switchMap((params: Params) => {
       const module = this.standaloneModule.getStandaloneModule(params['id']);
