@@ -1,7 +1,6 @@
 <main>
     <section>
-        <app-hero-banner [title]="'Correctional Health'" [subtitle]="'EHR Platform for'"
-            [description]="'Built for the realities of correctional care. Designed for the people delivering it. \n\nVirtu’s Electronic Health Record (EHR) platform is purpose-built for correctional facilities—giving clinicians, administrators, and support staff a powerful system designed to meet the unique demands of incarcerated care.'" />
+        <app-hero-banner [heroBanner]="heroBanner" />
     </section>
 
     <section class="section-container bg-section">
@@ -10,12 +9,17 @@
             teams deliver continuous, high-quality care—even in low-resource or high-security
             environments.
         </p>
-        <p class="text-xl text-white leading-8">
+        <p class="text-xl text-white leading-8 mb-12">
             Whether you're documenting intake screenings, administering medications, managing
             behavioral health cases, or coordinating discharge planning, Virtu’s secure, interoperable
             system connects every step of the patient journey—bringing clarity, speed, and accountability to
             every encounter.
         </p>
+
+        <video class="w-full" controls autoplay muted loop>
+            <source src="videos/ehr.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </section>
 
     <section class="section-container bg-footer">

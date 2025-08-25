@@ -5,6 +5,7 @@ import { CoreValue } from '../../components/core-value/core-value';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { IAvatar } from '../../interfaces/avatar';
 import { ICoreValue } from '../../interfaces/core-value';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 
 @Component({
   selector: 'app-about-us-page',
@@ -13,6 +14,11 @@ import { ICoreValue } from '../../interfaces/core-value';
   styleUrl: './about-us-page.css'
 })
 export class AboutUsPage {
+  heroBanner: IHeroBanner = {
+    title: 'Personalized, Data-Driven Solutions',
+    subtitle: 'Revolutionizing Healthcare with',
+  }
+
   coreValues: ICoreValue[] = [
     {
       title: 'Our Mission',

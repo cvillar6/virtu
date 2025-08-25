@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 
 @Component({
   selector: 'app-hero-banner',
@@ -8,9 +9,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './hero-banner.css'
 })
 export class HeroBanner {
-  @Input() title!: string;
-  @Input() subtitle?: string;
-  @Input() description?: string;
-  @Input() backgroundImage?: string;
-  @Input() displayButton: boolean = false;
+  @Input() heroBanner!: IHeroBanner;
 }

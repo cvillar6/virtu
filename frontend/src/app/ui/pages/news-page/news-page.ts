@@ -1,14 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, signal, WritableSignal } from '@angular/core';
+import { toObservable } from '@angular/core/rxjs-interop';
 import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
-import { toObservable } from '@angular/core/rxjs-interop';
+import { INewResponse } from '../../../services/interfaces/new-response';
+import { IPagination } from '../../../services/interfaces/pagination';
 import { Strapi } from '../../../services/strapi';
 import { ContactUs } from '../../components/contact-us/contact-us';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { New } from '../../components/new/new';
-import { IPagination } from '../../../services/interfaces/pagination';
-import { INewResponse } from '../../../services/interfaces/new-response';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 
 @Component({
   selector: 'app-news-page',
@@ -18,6 +19,12 @@ import { INewResponse } from '../../../services/interfaces/new-response';
 })
 export class NewsPage {
   private strapiService = inject(Strapi);
+
+  heroBanner: IHeroBanner = {
+    title: 'From Virtu Medical News',
+    subtitle: 'Stay Informed with the Latest Updates',
+    description: 'Explore timely news updates on healthcare innovation, Virtu Medical announcements, product launches, partnerships, and industry insights.',
+  }
 
   first: number = 1;
   rows: number = 6;

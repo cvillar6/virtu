@@ -6,6 +6,7 @@ import { KeyFeature } from '../../components/key-feature/key-feature';
 import { IBookDemo } from '../../interfaces/book-demo';
 import { ICoreValue } from '../../interfaces/core-value';
 import { IKeyFeature } from '../../interfaces/key-feature';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 
 @Component({
   selector: 'app-correctional-health-page',
@@ -14,6 +15,11 @@ import { IKeyFeature } from '../../interfaces/key-feature';
   styleUrl: './correctional-health-page.css'
 })
 export class CorrectionalHealthPage {
+  heroBanner: IHeroBanner = {
+    title: 'Correctional Health',
+    subtitle: 'EHR Platform for',
+    description: 'Built for the realities of correctional care. Designed for the people delivering it. \n\nVirtu’s Electronic Health Record (EHR) platform is purpose-built for correctional facilities—giving clinicians, administrators, and support staff a powerful system designed to meet the unique demands of incarcerated care.',
+  }
   features: ICoreValue[] = [
     {
       title: 'Continuity of Care in Complex Environments',

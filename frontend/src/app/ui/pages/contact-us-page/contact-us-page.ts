@@ -3,6 +3,7 @@ import { ContactUsCard } from '../../components/contact-us-card/contact-us-card'
 import { ContactUsForm } from '../../components/contact-us-form/contact-us-form';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { ICompanyData } from '../../interfaces/company-data';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 
 declare var VANTA: any;
 @Component({
@@ -12,6 +13,11 @@ declare var VANTA: any;
   styleUrl: './contact-us-page.css'
 })
 export class ContactUsPage implements AfterViewInit {
+  heroBanner: IHeroBanner = {
+    title: 'Virtu Medical',
+    subtitle: 'Get in Touch with Us',
+    description: 'Have questions or need more information? We\'re here to help. Reach out to our team for personalized support and learn how Virtu Medical can transform your healthcare operations.',
+  }
   contactUs: ICompanyData[] = [
     {
       title: 'Office Address',

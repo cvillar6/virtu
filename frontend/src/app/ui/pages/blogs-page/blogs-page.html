@@ -1,7 +1,6 @@
 <main>
     <section>
-        <app-hero-banner [title]="'Virtu Medical Resources'" [subtitle]="'Unlock Insights and Expertise with'"
-            [description]="'Explore our collection of blogs, case studies, and whitepapers to stay informed on the latest healthcare trends, best practices, and innovative solutions. Whether you\'re looking for expert advice or in-depth analysis, our resources are here to guide you in navigating the evolving landscape of healthcare technology.'" />
+        <app-hero-banner [heroBanner]="heroBanner" />
     </section>
 
     @if (blogs$ | async; as blogs) {
@@ -38,6 +37,10 @@
                 </ng-template>
             </p-paginator>
         </div>
+    </section>
+    } @else {
+    <section class="section-container flex justify-center items-center">
+        <i class="pi pi-spin pi-spinner text-9xl text-primary"></i>
     </section>
     }
 

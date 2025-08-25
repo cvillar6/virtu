@@ -1,7 +1,6 @@
 <main>
     <section>
-        <app-hero-banner [title]="'From Virtu Medical News'" [subtitle]="'Stay Informed with the Latest Updates'"
-            [description]="'Explore timely news updates on healthcare innovation, Virtu Medical announcements, product launches, partnerships, and industry insights.'" />
+        <app-hero-banner [heroBanner]="heroBanner" />
     </section>
 
     @if (news$ | async; as news) {
@@ -38,6 +37,10 @@
                 </ng-template>
             </p-paginator>
         </div>
+    </section>
+    }@else {
+    <section class="section-container flex justify-center items-center">
+        <i class="pi pi-spin pi-spinner text-9xl text-primary"></i>
     </section>
     }
 

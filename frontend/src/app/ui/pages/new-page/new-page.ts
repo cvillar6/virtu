@@ -7,6 +7,7 @@ import { Strapi } from '../../../services/strapi';
 import { DynamicContent } from '../../components/dynamic-content/dynamic-content';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { New } from '../../components/new/new';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 import { INew } from '../../interfaces/new';
 
 @Component({
@@ -18,6 +19,11 @@ import { INew } from '../../interfaces/new';
 export class NewPage {
   private route = inject(ActivatedRoute);
   private strapi = inject(Strapi);
+
+  heroBanner: IHeroBanner = {
+    title: 'Virtu Medical Resources',
+    backgroundImage: 'bg-new-hero',
+  }
 
   new$: Observable<INew | null> = this.route.params.pipe(
     switchMap((params: Params) => this.strapi.getSingleItem('news', params['id'])),

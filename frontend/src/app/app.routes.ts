@@ -8,6 +8,7 @@ import { HomePage } from './ui/pages/home-page/home-page';
 import { NewPage } from './ui/pages/new-page/new-page';
 import { NewsPage } from './ui/pages/news-page/news-page';
 import { PatientAppPage } from './ui/pages/patient-app-page/patient-app-page';
+import { StandaloneModulePage } from './ui/pages/standalone-module-page/standalone-module-page';
 import { UsecasePage } from './ui/pages/usecase-page/usecase-page';
 import { UsecasesPage } from './ui/pages/usecases-page/usecases-page';
 
@@ -55,6 +56,10 @@ export const routes: Routes = [
     {
         path: 'patient-app',
         component: PatientAppPage,
+    },
+    {
+        path: 'standalone-module/:id',
+        component: StandaloneModulePage,
     },
     {
         path: '**',
