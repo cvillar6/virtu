@@ -29,7 +29,7 @@ export class Header implements OnInit {
             {
               label: 'Solutions',
               items: [
-                { label: 'Analytics portal' },
+                { label: 'Analytics portal', routerLink: '/analytics-portal' },
                 { label: 'Imaging', routerLink: '/standalone-module/imaging' },
                 { label: 'Hospitalization', routerLink: '/standalone-module/hospitalization' },
                 { label: 'Referral Managements', routerLink: '/standalone-module/referral-managements' },

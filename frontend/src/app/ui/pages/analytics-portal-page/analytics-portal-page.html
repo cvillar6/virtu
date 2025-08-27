@@ -1,0 +1,54 @@
+<main>
+    <section>
+        <app-hero-banner [heroBanner]="heroBanner" />
+    </section>
+
+    <section class="section-container">
+        <h2 class="text-3xl text-title text-center mb-14 lg:text-5xl">
+            Explore the Features of Virtu's Analytics Portal
+        </h2>
+
+        <p-tabs [value]="0">
+            <p-tablist class="flex gap-6 overflow-x-auto mb-14 md:overflow-x-hidden">
+                @for (tab of analyticsFeatures; track $index) {
+                <p-tab class="bg-tab rounded-full px-4 py-2 text-lg text-title font-normal" [value]="$index">{{
+                    tab.title }}</p-tab>
+                }
+            </p-tablist>
+            <p-tabpanels>
+                @for (tab of analyticsFeatures; track $index) {
+                <p-tabpanel [value]="$index">
+                    <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+                        <div class="mb-10 lg:mb-0 lg:flex lg:flex-col lg:justify-center">
+                            <p class="text-3xl text-title mb-8 lg:text-4xl">{{ tab.title }}</p>
+                            <p class="text-2xl text-subtitle leading-9">{{ tab.description }}</p>
+                        </div>
+                        <div>
+                            <img [src]="tab.image" [alt]="tab.title">
+                        </div>
+                    </div>
+                </p-tabpanel>
+                }
+            </p-tabpanels>
+        </p-tabs>
+    </section>
+
+    <section class="section-container bg-button">
+        <p-carousel [value]="clients" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false"
+            [showNavigators]="true">
+            <ng-template let-client #item>
+                <app-client [client]="client" />
+            </ng-template>
+            <ng-template #previousicon>
+                <i class="pi pi-arrow-circle-left text-primary text-6xl"></i>
+            </ng-template>
+            <ng-template #nexticon>
+                <i class="pi pi-arrow-circle-right text-primary text-6xl"></i>
+            </ng-template>
+        </p-carousel>
+    </section>
+
+    <section class="section-container bg-button">
+        <app-book-demo [bookDemo]="bookDemo" />
+    </section>
+</main>
