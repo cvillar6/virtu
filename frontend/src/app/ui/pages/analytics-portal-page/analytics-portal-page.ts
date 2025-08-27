@@ -27,22 +27,22 @@ export class AnalyticsPortalPage {
 
   clients: IClient[] = [
     {
-      name: 'John Doe',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      position: 'CEO',
+      name: 'Sandra M.',
+      description: "From a leadership standpoint, the flexibility of the platform is huge. Whether you’re running one clinic or multiple it adapts to your needs. We've expanded to three new locations, and Virtu scaled with us seamlessly — no major leaming curves, no downtime.",
+      position: 'Clinic Administrator',
       image: 'images/client-1.svg',
     },
     {
-      name: 'John Doe',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      position: 'CEO',
-      image: 'images/client-1.svg',
+      name: 'Jhon Michaels',
+      description: "From a leadership standpoint, the flexibility of the platform is huge. Whether you’re running one clinic or multiple it adapts to your needs. We've expanded to three new locations, and Virtu scaled with us seamlessly — no major leaming curves, no downtime.",
+      position: 'Physician',
+      image: 'images/client-2.svg',
     },
     {
-      name: 'John Doe',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      position: 'CEO',
-      image: 'images/client-1.svg',
+      name: 'Jhon Nguyen',
+      description: "From a leadership standpoint, the flexibility of the platform is huge. Whether you’re running one clinic or multiple it adapts to your needs. We've expanded to three new locations, and Virtu scaled with us seamlessly — no major leaming curves, no downtime.",
+      position: 'Healthcare Administrator',
+      image: 'images/client-3.svg',
     },
   ];
 

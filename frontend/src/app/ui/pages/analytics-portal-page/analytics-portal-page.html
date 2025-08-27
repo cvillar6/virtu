@@ -35,7 +35,7 @@
 
     <section class="section-container bg-button">
         <p-carousel [value]="clients" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false"
-            [showNavigators]="true">
+            [showNavigators]="true" [autoplayInterval]="3000">
             <ng-template let-client #item>
                 <app-client [client]="client" />
             </ng-template>
