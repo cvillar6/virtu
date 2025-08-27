@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AboutUsPage } from './ui/pages/about-us-page/about-us-page';
+import { AnalyticsPortalPage } from './ui/pages/analytics-portal-page/analytics-portal-page';
 import { BlogPage } from './ui/pages/blog-page/blog-page';
 import { BlogsPage } from './ui/pages/blogs-page/blogs-page';
 import { ContactUsPage } from './ui/pages/contact-us-page/contact-us-page';
@@ -60,6 +61,10 @@ export const routes: Routes = [
     {
         path: 'standalone-module/:id',
         component: StandaloneModulePage,
+    },
+    {
+        path: 'analytics-portal',
+        component: AnalyticsPortalPage,
     },
     {
         path: '**',

@@ -1,0 +1,67 @@
+::ng-deep .p-tablist-tab-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: none;
+
+
+}
+
+@media (min-width: 768px) {
+    ::ng-deep .p-tablist-tab-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+::ng-deep .p-tab:hover {
+    background-color: var(--color-tab-active);
+}
+
+::ng-deep .p-tab-active {
+    background-color: var(--color-tab-active);
+    border-color: var(--color-tab-active);
+}
+
+/* Ocultar barra de scroll pero mantener funcionalidad */
+::ng-deep .p-tablist {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+::ng-deep .p-tablist::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+::ng-deep .p-carousel-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+::ng-deep .p-carousel-viewport {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    border-radius: 24px;
+}
+
+::ng-deep .p-carousel-content .p-carousel-prev-button,
+::ng-deep .p-carousel-content .p-carousel-next-button {
+    order: 1;
+    flex-shrink: 1;
+}
+
+::ng-deep .p-carousel-content .p-carousel-next-button button,
+::ng-deep .p-carousel-content .p-carousel-prev-button button {
+    border-radius: none;
+    width: 100%;
+    height: 100% !important;
+}
+
+::ng-deep .p-carousel-content .p-carousel-next-button button:hover,
+::ng-deep .p-carousel-content .p-carousel-prev-button button:hover {
+    background-color: transparent !important;
+}
