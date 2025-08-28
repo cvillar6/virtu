@@ -45,6 +45,8 @@ export class Header implements OnInit {
       },
       {
         label: 'Industries',
+        routerLink: '/industries',
+        routerLinkActiveOptions: { exact: true },
       },
       {
         label: 'About Us',

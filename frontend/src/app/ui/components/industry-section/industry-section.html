@@ -1,0 +1,32 @@
+<main class="section-container lg:flex lg:items-center lg:gap-16"
+    [ngClass]="even ? 'bg-button' : 'bg-white  lg:flex-row-reverse'">
+    <div class="mb-8 lg:mb-0 lg:w-1/2">
+        <h3 class="text-3xl text-title mb-8 lg:text-5xl lg:mb-14">
+            {{ industrySection.information.title }}
+        </h3>
+        <p class="text-xl text-subtitle leading-9 lg:text-2xl">
+            {{ industrySection.information.description }}
+        </p>
+    </div>
+    <div class="lg:w-1/2">
+        <ul class="flex flex-col gap-6">
+            @for (industrySolution of industrySection.solutions; track $index) {
+            <li class="p-4 rounded-xl bg-white border border-border lg:p-6">
+                <div class="mb-4 lg:flex lg:items-center lg:gap-4 lg:mb-8">
+                    <div class="bg-industry-bg-icon p-2 w-fit rounded-lg">
+                        <img [src]="industrySolution.image" [alt]="industrySolution.title" />
+                    </div>
+                    <h3 class="text-3xl text-title mt-4 lg:mt-0">
+                        {{ industrySolution.title }}
+                    </h3>
+                </div>
+                <div>
+                    <p class="text-2xl text-subtitle leading-9">
+                        {{ industrySolution.description }}
+                    </p>
+                </div>
+            </li>
+            }
+        </ul>
+    </div>
+</main>
