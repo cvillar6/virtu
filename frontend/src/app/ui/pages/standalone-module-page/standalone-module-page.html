@@ -1,0 +1,72 @@
+<main>
+    @if (standaloneModule$ | async; as standaloneModule) {
+    <section>
+        <app-hero-banner [heroBanner]="standaloneModule.heroBanner" />
+    </section>
+
+    <section class="section-container bg-footer">
+        <h2 class="text-3xl text-white text-center mb-14">
+            What You'll Gain
+        </h2>
+
+        <div class="lg:grid lg:grid-cols-5 lg:gap-12">
+            <div class="hidden lg:flex lg:col-span-2 lg:items-center">
+                @if (activePanel) {
+                <img [src]="'images/' + standaloneModule.id + '-' + activePanel + '.svg'" alt="">
+                } @else {
+                <img [src]="'images/' + standaloneModule.id + '-' + 0 + '.svg'" alt="">
+                }
+            </div>
+
+
+            <ul class=" flex flex-col gap-4 lg:col-span-3">
+                <p-accordion [(value)]="activePanel">
+                    @for (feature of standaloneModule.moduleFeatures; track $index) {
+                    <p-accordion-panel class="border-border-accordion px-5 py-6" [value]="$index">
+                        <p-accordion-header class="bg-footer text-xl text-white font-semibold p-0">{{ feature.title
+                            }}
+                            <ng-template #toggleicon let-active="active">
+                                @if (active) {
+                                <div class="flex items-center justify-center bg-paginator-selected rounded-sm p-1">
+                                    <i class="pi pi-minus text-4xl text-white"></i>
+                                </div>
+                                } @else {
+                                <div class="flex items-center justify-center bg-paginator-selected rounded-sm p-1">
+                                    <i class="pi pi-plus text-4xl text-white"></i>
+                                </div>
+                                }
+                            </ng-template>
+                        </p-accordion-header>
+                        <p-accordion-content>
+                            <p class="bg-footer text-white text-base pt-6">
+                                {{ feature.description }}
+                            </p>
+                        </p-accordion-content>
+                    </p-accordion-panel>
+                    }
+                </p-accordion>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-container bg-contact-us">
+        <div class="lg:rounded-4xl lg:shadow-lg lg:p-8">
+            <h2 class="text-3xl text-title text-center mb-14">
+                Key Features
+            </h2>
+
+            <ul class="flex flex-col gap-4 lg:grid lg:grid-cols-2">
+                @for (keyFeature of standaloneModule.keyFeatures; track keyFeature.title) {
+                <li>
+                    <app-key-feature [keyFeature]="keyFeature"></app-key-feature>
+                </li>
+                }
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-container bg-button">
+        <app-book-demo [bookDemo]="standaloneModule.bookDemo" />
+    </section>
+    }
+</main>

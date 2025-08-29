@@ -1,4 +1,5 @@
-<main class="py-24 lg:py-0 lg:flex lg:items-center lg:gap-14"
+<main class="py-24 lg:py-0 lg:flex lg:items-center lg:gap-14" pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000"
     [ngClass]="{'lg:flex-row-reverse': imagePosition === 'right'}">
     <div class="mb-10 lg:w-1/2 lg:mb-0">
         <img [src]="image" alt="Hero Feature" class="w-full h-full object-cover">

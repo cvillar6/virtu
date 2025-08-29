@@ -1,16 +1,24 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Avatar } from '../../components/avatar/avatar';
 import { CoreValue } from '../../components/core-value/core-value';
+import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { IAvatar } from '../../interfaces/avatar';
 import { ICoreValue } from '../../interfaces/core-value';
+import { IHeroBanner } from '../../interfaces/hero-banner';
 
 @Component({
   selector: 'app-about-us-page',
-  imports: [CoreValue, Avatar],
+  imports: [HeroBanner, CoreValue, Avatar, CommonModule],
   templateUrl: './about-us-page.html',
   styleUrl: './about-us-page.css'
 })
 export class AboutUsPage {
+  heroBanner: IHeroBanner = {
+    title: 'Personalized, Data-Driven Solutions',
+    subtitle: 'Revolutionizing Healthcare with',
+  }
+
   coreValues: ICoreValue[] = [
     {
       title: 'Our Mission',

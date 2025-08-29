@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter Font/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('/virtu/fonts/Inter Font/Inter-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -32,14 +32,60 @@
   --color-paginator-selected: #1B3E7E;
   --color-blog-title: #121417;
   --color-blog-description: #667082;
+  --color-proven-impact: #EBFAF9;
+  --color-border-accordion: #EAF0FB4D;
+  --color-tab: #EAF0FB;
+  --color-tab-active: #D5E1F6;
+  --color-industry: #2452A8;
+  --color-industry-bg-icon: #D6F5F3;
+  --bg-home-hero-m: url('/virtu/images/home-hero-m.png');
+  --bg-home-hero-d: url('/virtu/images/home-hero-d.png');
+  --bg-blog-hero-m: url('/virtu/images/resource-hero-m.png');
+  --bg-blog-hero-d: url('/virtu/images/blog-hero-d.png');
+  --bg-new-hero-m: url('/virtu/images/resource-hero-m.png');
+  --bg-new-hero-d: url('/virtu/images/new-hero-d.png');
+}
+
+:root {
+  color-scheme: light !important;
 }
 
 body {
   font-family: var(--font-primary);
 }
 
+.bg-home-hero {
+  background-image: var(--bg-home-hero-m);
+}
+
+.bg-blog-hero {
+  background-image: var(--bg-blog-hero-m);
+}
+
+.bg-new-hero {
+  background-image: var(--bg-new-hero-m);
+}
+
+@media screen and (min-width: 1024px) {
+  .bg-home-hero {
+    background-image: var(--bg-home-hero-d);
+  }
+
+  .bg-blog-hero {
+    background-image: var(--bg-blog-hero-d);
+  }
+
+  .bg-new-hero {
+    background-image: var(--bg-new-hero-d);
+  }
+}
+
 .section-container {
-  @apply px-4 py-14 lg:px-24 lg:py-20;
+  @apply px-4 py-10 lg:px-24 lg:py-20;
+}
+
+.menu-link {
+  @apply text-base text-footer hover:text-primary hover:underline hover:font-semibold;
 }
 
 .primary-button {
