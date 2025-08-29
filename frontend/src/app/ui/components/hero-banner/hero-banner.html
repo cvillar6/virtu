@@ -12,11 +12,25 @@
                 [ngClass]="heroBanner.backgroundImage ? 'text-white text-center' : 'text-subtitle'">
                 {{heroBanner.title }}
             </h1>
+            @if (heroBanner.solutionSubtitle) {
+            <p class="text-2xl lg:text-3xl lg:text-left"
+                [ngClass]="heroBanner.backgroundImage ? 'text-white text-center' : 'text-description'">
+                {{heroBanner.solutionSubtitle}}
+            </p>
+            }
             @if (heroBanner.description) {
             <p class="text-xl mt-6 whitespace-pre-line lg:text-2xl lg:text-left lg:mt-14"
                 [ngClass]="heroBanner.backgroundImage ? 'text-white text-center' : 'text-subtitle'">
                 {{heroBanner.description}}
             </p>
+            }
+            @if (heroBanner.sponsorImage) {
+            <div class="mt-6 lg:mt-14">
+                <p class="text-xl text-subtitle mb-5">
+                    Powered by
+                </p>
+                <img src="{{heroBanner.sponsorImage}}" alt="Sponsor" class="w-32 h-auto mt-2">
+            </div>
             }
             @if (heroBanner.displayButton) {
             <div class="flex justify-center mt-6 lg:mt-14 lg:justify-start">

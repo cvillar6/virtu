@@ -5,7 +5,9 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
         id: 'transportation',
         heroBanner: {
             title: 'Healthcare Transportation Module – Medical Transportation Software',
+            solutionSubtitle: 'Smarter medical transportation—built by healthcare experts.',
             description: 'The Transportation Module is a first-of-its-kind medical transportation software integrated with Uber Health, designed specifically for healthcare environments. Built for transportation officers, clinical coordinators, and mobile teams, it centralizes scheduling, real-time tracking, and patient syncing into one intuitive, HIPAA-compliant platform. Whether you are running your own fleet or using external vendors, this stand - alone solution streamlines operations, cuts costs, and helps ensure patients get to care—safely, reliably, and on time.',
+            sponsorImage: 'images/sponsor.svg'
         },
         moduleFeatures: [
             {
@@ -77,6 +79,7 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
         id: 'disenrollments',
         heroBanner: {
             title: 'Disenrollment Module - Patient retention software',
+            solutionSubtitle: 'Know why patients leave. Act on what matters. Win them back.',
             description: 'The Disenrollment Module helps healthcare organizations uncover the reasons behind patient attrition—and do something about it. With built-in trend tracking, targeted surveys, and plan-level insights, your team can address the drivers of disengagement and strengthen patient relationships before it’s too late. Whether youare managing network performance or patient experience, this stand - alone patient retention software brings retention into focus.'
         },
         moduleFeatures: [
@@ -140,6 +143,7 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
         id: 'patient-outreach',
         heroBanner: {
             title: 'Patient Engagement Platform',
+            solutionSubtitle: 'Reach patients the right way—automatically, personally, and at scale.',
             description: 'The Patient Outreach Module transforms how healthcare organizations communicate with their patients. Whether you are reminding patients about upcoming appointments, sharing educational materials, or following up after a visit, this stand-alone Patient Engagement Platform centralizes and automates outreach — while staying fully HIPAA-compliant. With built-in analytics, multi-channel communication, and customizable workflows, it helps your team engage patients proactively, reduce no-shows, and improve the care experience across the board.'
         },
         moduleFeatures: [
@@ -198,6 +202,7 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
         id: 'referral-managements',
         heroBanner: {
             title: 'Referral Management Module',
+            solutionSubtitle: 'Close the loop. Connect the care.',
             description: 'The Referral Management Module gives your team full visibility into the referral lifecycle — from initial submission to scheduled appointments and follow-up. Built to reduce delays and eliminate manual tracking, this stand-alone solution keeps providers, patients, and care coordinators aligned every step of the way. Whether you are coordinating specialty referrals, lab orders, or external consultations, Virtu makes the process seamless and accountable.'
         },
         moduleFeatures: [
@@ -261,6 +266,7 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
         id: 'hospitalization',
         heroBanner: {
             title: 'Hospitalization Module - Bed management system',
+            solutionSubtitle: 'See the whole picture. Act when it matters most.',
             description: 'The Hospitalization Module equips care teams with real-time insights into hospital admissions, ER visits, and readmissions—empowering smarter, faster decisions. Whether you are managing transitions of care or monitoring utilization patterns, this stand - alone bed management system keeps you ahead of risk. From live event tracking to follow- up coordination, it connects the dots between hospital data and better outcomes.'
         },
         moduleFeatures: [
@@ -319,6 +325,7 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
         id: 'imaging',
         heroBanner: {
             title: 'Imaging Module - Medical image management software',
+            solutionSubtitle: 'Simplify diagnostics. Accelerate answers. Improve collaboration.',
             description: 'The Imaging Module is a secure, stand-alone medical image management software solution designed to streamline every step of diagnostic imaging—from scheduling and documentation to results sharing and billing. Whether you’re a radiology center, referring provider, or care coordinator, this module centralizes key workflows into a single, easy-to-use platform. With real-time access to imaging history, modality tracking, and physician communication tools, it helps you deliver faster, more coordinated care.'
         },
         moduleFeatures: [

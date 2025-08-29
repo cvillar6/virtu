@@ -46,8 +46,6 @@ export class AnalyticsPortalPage {
     },
   ];
 
-
-
   bookDemo: IBookDemo = {
     title: 'Ready to transform your operations and elevate patient care?',
     description: "Join the growing number of healthcare teams using Virtu's Analytics Portal to take control of their data and drive better outcomes.",

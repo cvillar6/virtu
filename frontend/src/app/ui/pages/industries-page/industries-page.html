@@ -1,0 +1,29 @@
+<main>
+    <section>
+        <app-hero-banner [heroBanner]="heroBanner" />
+    </section>
+
+    <section class="section-container">
+        <h2 class="text-3xl text-description text-center mb-12 lg:text-5xl lg:mb-20">
+            Built for Every Kind of Care Team
+        </h2>
+
+        <ul class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+            @for (industry of industries; track $index) {
+            <li>
+                <app-industry [industry]="industry" />
+            </li>
+            }
+        </ul>
+    </section>
+
+    <section>
+        @for (industrySection of industrySection; track $index) {
+        <app-industry-section [industrySection]="industrySection" [even]="$index % 2 === 0" />
+        }
+    </section>
+
+    <section class="section-container bg-button">
+        <app-book-demo [bookDemo]="bookDemo" />
+    </section>
+</main>
