@@ -28,11 +28,11 @@ export const routes: Routes = [
         component: AboutUsPage,
     },
     {
-        path: 'blogs',
+        path: 'resources',
         component: BlogsPage,
     },
     {
-        path: 'blogs/:id',
+        path: 'resources/:id',
         component: BlogPage,
     },
     {
@@ -60,7 +60,7 @@ export const routes: Routes = [
         component: PatientAppPage,
     },
     {
-        path: 'standalone-module/:id',
+        path: 'solutions/:id',
         component: StandaloneModulePage,
     },
     {

@@ -30,12 +30,12 @@ export class Header implements OnInit {
               label: 'Solutions',
               items: [
                 { label: 'Analytics portal', routerLink: '/analytics-portal' },
-                { label: 'Imaging', routerLink: '/standalone-module/imaging' },
-                { label: 'Hospitalization', routerLink: '/standalone-module/hospitalization' },
-                { label: 'Referral Managements', routerLink: '/standalone-module/referral-managements' },
-                { label: 'Patient Outreach', routerLink: '/standalone-module/patient-outreach' },
-                { label: 'Disenrollments', routerLink: '/standalone-module/disenrollments' },
-                { label: 'Transportation', routerLink: '/standalone-module/transportation' },
+                { label: 'Imaging', routerLink: '/solutions/imaging' },
+                { label: 'Hospitalization', routerLink: '/solutions/hospitalization' },
+                { label: 'Referral Managements', routerLink: '/solutions/referral-managements' },
+                { label: 'Patient Outreach', routerLink: '/solutions/patient-outreach' },
+                { label: 'Disenrollments', routerLink: '/solutions/disenrollments' },
+                { label: 'Transportation', routerLink: '/solutions/transportation' },
                 { label: 'EHR', routerLink: '/correctional-health' },
                 { label: 'Patient Mobile App', routerLink: '/patient-app' },
               ],
@@ -60,7 +60,7 @@ export class Header implements OnInit {
             {
               label: 'Resources',
               items: [
-                { label: 'Blogs', routerLink: '/blogs', routerLinkActiveOptions: { exact: true } },
+                { label: 'Blogs', routerLink: '/resources', routerLinkActiveOptions: { exact: true } },
                 { label: 'Case Studies', routerLink: '/usecases', routerLinkActiveOptions: { exact: true } },
                 { label: 'News', routerLink: '/news', routerLinkActiveOptions: { exact: true } }
               ]
