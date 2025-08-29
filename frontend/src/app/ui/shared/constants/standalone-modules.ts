@@ -35,37 +35,44 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
             {
                 title: 'First to Integrate Uber Health',
                 description: 'Use Uber Health as a flexible backup or primary transportation option—fully embedded into your medical transportation software dispatch system.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Automated Scheduling & Dispatch',
                 description: 'Monitor live vehicle locations and access detailed route logs to ensure transparency and compliance with your medical transportation software.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Real-Time GPS & Route Logs',
                 description: 'Monitor live vehicle locations and access detailed route logs to ensure transparency and compliance.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Driver Communication Tools',
                 description: 'Enable real-time updates and task changes with built-in messaging on driver tablets.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'EHR & Appointment Syncing',
                 description: 'Automatically sync patient details, appointments, and transportation needs in real time through the medical transportation software platform.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Maintenance & Safety Alerts',
                 description: 'Stay ahead of compliance and safety with automated reminders for vehicle checks and maintenance logs.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Standalone or Integrated',
                 description: 'Use independently or as part of Virtu\'s connected medical transportation software platform for end-to-end care coordination.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
         ],
         bookDemo: {
@@ -102,34 +109,34 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
         ],
         keyFeatures: [
             {
-                title: 'Patient Retention',
-                description: 'Keep patients engaged and informed with automated reminders, appointment confirmations, and personalized communications.',
-                icon: 'images/key-feature.svg'
-            },
-            {
                 title: 'Disenrollment Trend Reports',
                 description: 'Track disenrollment by plan, line of business, and center—with easy-to-read visuals and comparison tools using our patient retention software.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Exit Survey Automation',
                 description: 'Send tailored surveys to departing patients to capture experience feedback in real time.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Top Driver Analysis',
                 description: 'Identify the most common reasons for leaving and uncover gaps in services or access.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Reenrollment Monitoring',
                 description: 'View patterns of returning patients and analyze which efforts are driving reengagement.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Standalone or Integrated',
                 description: 'Use independently or integrate with your Virtu modules or EHR system for a unified patient view.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
         ],
         bookDemo: {
@@ -168,27 +175,32 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
             {
                 title: 'Automated Reminder System',
                 description: 'Trigger appointment reminders via SMS, email, or voice — and let patients confirm or reschedule with ease using our Patient Engagement Platform.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Content & Survey Delivery Tools',
                 description: 'Share customized education content, satisfaction surveys, and care tips based on patient history.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Secure Two-Way Messaging',
                 description: 'Empower patients to ask questions, receive updates, and stay connected — all in a HIPAA-compliant environment.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Outreach Analytics & Reporting',
                 description: 'Monitor real-time engagement metrics and export insights to continuously improve performance.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Standalone or Integrated',
                 description: 'Use independently or sync with your Virtu modules or EHR system to create a seamless communication experience.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
         ],
         bookDemo: {
@@ -227,32 +239,38 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
             {
                 title: 'Centralized Referral Tracking',
                 description: 'Manage all incoming and outgoing referrals in one place — searchable, filterable, and up to date with our Referral Management Module.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Secure Provider Messaging',
                 description: 'Enable direct, HIPAA-compliant communication between providers to coordinate patient care.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Patient Referral Portal',
                 description: 'Give patients access to view status, receive automated reminders, and prepare for upcoming appointments.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Automated Status Updates',
                 description: 'Trigger alerts when referrals are scheduled, delayed, or require follow-up — reducing manual work.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Turnaround Metrics & Bottleneck Analysis',
                 description: 'Track response times, measure referral outcomes, and uncover workflow inefficiencies.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Standalone or Integrated',
                 description: 'Use independently or connect with your existing EHR and Virtu modules for streamlined coordination.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
         ],
         bookDemo: {
@@ -291,27 +309,32 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
             {
                 title: 'Live Hospital & ER Event Monitoring',
                 description: 'Receive immediate updates on admissions, observation stays, and emergency visits with our bed management system.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Utilization & Readmission Analytics',
                 description: 'Visualize trends by patient, provider, or site —perfect for ACOs and value-based contracts.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Provider Performance Comparison',
                 description: 'Identify top-performing and high-utilization providers to inform strategic decisions.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Discharge & Follow-Up Tracking',
                 description: 'Monitor transitions of care and ensure timely post-discharge engagement.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Custom Dashboards & Exportable Reports',
                 description: 'Choose how you see your data—with flexible visualizations and downloadable insights.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
         ],
         bookDemo: {
@@ -350,27 +373,32 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
             {
                 title: 'Built-In Imaging Calendar',
                 description: 'Schedule and adjust appointments by day, week, or month with full visibility into availability.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Secure Uploads & Results Sharing',
                 description: 'Exchange referrals, authorizations, and imaging results with both patients and providers through our medical image management software.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Modality-Based Reporting',
                 description: 'Filter and monitor exams by type to ensure complete diagnostic coverage and reduce delays.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Authorization & Billing Integration',
                 description: 'Capture superbill details and insurance documentation without jumping between systems.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
             {
                 title: 'Access to Historical Imaging Data',
                 description: 'Quickly view past imaging records for each patient—supporting more informed decisions.',
-                icon: 'images/key-feature.svg'
+                icon: 'images/key-feature.svg',
+                iconHover: 'images/key-feature-hover.svg'
             },
         ],
         bookDemo: {

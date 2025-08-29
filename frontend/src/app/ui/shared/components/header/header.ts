@@ -29,6 +29,7 @@ export class Header implements OnInit {
             {
               label: 'Solutions',
               items: [
+                { label: 'EHR', routerLink: '/correctional-health' },
                 { label: 'Analytics portal', routerLink: '/analytics-portal' },
                 { label: 'Imaging', routerLink: '/solutions/imaging' },
                 { label: 'Hospitalization', routerLink: '/solutions/hospitalization' },
@@ -36,7 +37,6 @@ export class Header implements OnInit {
                 { label: 'Patient Outreach', routerLink: '/solutions/patient-outreach' },
                 { label: 'Disenrollments', routerLink: '/solutions/disenrollments' },
                 { label: 'Transportation', routerLink: '/solutions/transportation' },
-                { label: 'EHR', routerLink: '/correctional-health' },
                 { label: 'Patient Mobile App', routerLink: '/patient-app' },
               ],
             },

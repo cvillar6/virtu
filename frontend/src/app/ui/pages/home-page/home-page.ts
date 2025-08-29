@@ -16,9 +16,9 @@ import { IHeroBanner } from '../../interfaces/hero-banner';
 })
 export class HomePage {
   heroBanner: IHeroBanner = {
-    title: 'Through Smarter Insights',
-    subtitle: 'Drive Better Health',
-    description: 'Uncover risk, elevate care quality, and act on what matters—because real outcomes start with real intelligence.',
+    title: "Smarter Healthcare Data Platform",
+    subtitle: "Drive Better Health with a",
+    description: "Uncover risk, elevate care quality, and act on what matters—with a healthcare data platform built for real-world outcomes.",
     backgroundImage: 'bg-home-hero',
     displayButton: true,
   }

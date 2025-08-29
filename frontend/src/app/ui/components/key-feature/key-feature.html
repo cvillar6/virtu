@@ -1,6 +1,7 @@
-<main class="p-4">
-    <div class="p-3 bg-button rounded-lg w-fit mb-4">
-        <img [src]="keyFeature.icon" alt="Key Feature">
+<main class="p-4 rounded-xl group hover:bg-button">
+    <div class="p-3 bg-button rounded-lg w-fit mb-4 group-hover:bg-primary">
+        <img [src]="keyFeature.icon" alt="Key Feature" class="w-[24px] h-[24px] group-hover:hidden">
+        <img [src]="keyFeature.iconHover" alt="Key Feature" class="w-[24px] h-[24px] hidden group-hover:block">
     </div>
     <div>
         <h3 class="text-xl text-hero-section font-semibold mb-3">
