@@ -33,9 +33,9 @@ export class Header implements OnInit {
                 { label: 'Analytics portal', routerLink: '/analytics-portal' },
                 { label: 'Imaging', routerLink: '/solutions/imaging' },
                 { label: 'Hospitalization', routerLink: '/solutions/hospitalization' },
-                { label: 'Referral Managements', routerLink: '/solutions/referral-managements' },
+                { label: 'Referral Management', routerLink: '/solutions/referral-managements' },
                 { label: 'Patient Outreach', routerLink: '/solutions/patient-outreach' },
-                { label: 'Disenrollments', routerLink: '/solutions/disenrollments' },
+                { label: 'Disenrollment', routerLink: '/solutions/disenrollments' },
                 { label: 'Transportation', routerLink: '/solutions/transportation' },
                 { label: 'Patient Mobile App', routerLink: '/patient-app' },
               ],
@@ -62,7 +62,7 @@ export class Header implements OnInit {
               items: [
                 { label: 'Blogs', routerLink: '/resources', routerLinkActiveOptions: { exact: true } },
                 { label: 'Case Studies', routerLink: '/usecases', routerLinkActiveOptions: { exact: true } },
-                { label: 'News', routerLink: '/news', routerLinkActiveOptions: { exact: true } }
+                { label: 'News and Articles', routerLink: '/news', routerLinkActiveOptions: { exact: true } }
               ]
             }
           ],

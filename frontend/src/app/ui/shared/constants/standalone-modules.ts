@@ -4,7 +4,7 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
     {
         id: 'transportation',
         heroBanner: {
-            title: 'Healthcare Transportation Module – Medical Transportation Software',
+            title: 'Medical Transportation Software',
             solutionSubtitle: 'Smarter medical transportation—built by healthcare experts.',
             description: 'The Transportation Module is a first-of-its-kind medical transportation software integrated with Uber Health, designed specifically for healthcare environments. Built for transportation officers, clinical coordinators, and mobile teams, it centralizes scheduling, real-time tracking, and patient syncing into one intuitive, HIPAA-compliant platform. Whether you are running your own fleet or using external vendors, this stand - alone solution streamlines operations, cuts costs, and helps ensure patients get to care—safely, reliably, and on time.',
             sponsorImage: 'images/sponsor.svg'
@@ -85,7 +85,7 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
     {
         id: 'disenrollments',
         heroBanner: {
-            title: 'Disenrollment Module - Patient retention software',
+            title: 'Patient Retention Software',
             solutionSubtitle: 'Know why patients leave. Act on what matters. Win them back.',
             description: 'The Disenrollment Module helps healthcare organizations uncover the reasons behind patient attrition—and do something about it. With built-in trend tracking, targeted surveys, and plan-level insights, your team can address the drivers of disengagement and strengthen patient relationships before it’s too late. Whether youare managing network performance or patient experience, this stand - alone patient retention software brings retention into focus.'
         },
@@ -347,7 +347,7 @@ export const STANDALONE_MODULES: IStandaloneModule[] = [
     {
         id: 'imaging',
         heroBanner: {
-            title: 'Imaging Module - Medical image management software',
+            title: 'Medical Image Management Software',
             solutionSubtitle: 'Simplify diagnostics. Accelerate answers. Improve collaboration.',
             description: 'The Imaging Module is a secure, stand-alone medical image management software solution designed to streamline every step of diagnostic imaging—from scheduling and documentation to results sharing and billing. Whether you’re a radiology center, referring provider, or care coordinator, this module centralizes key workflows into a single, easy-to-use platform. With real-time access to imaging history, modality tracking, and physician communication tools, it helps you deliver faster, more coordinated care.'
         },
