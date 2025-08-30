@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Avatar } from '../../components/avatar/avatar';
+import { BookDemo } from '../../components/book-demo/book-demo';
 import { CoreValue } from '../../components/core-value/core-value';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { IAvatar } from '../../interfaces/avatar';
+import { IBookDemo } from '../../interfaces/book-demo';
 import { ICoreValue } from '../../interfaces/core-value';
 import { IHeroBanner } from '../../interfaces/hero-banner';
 
 @Component({
   selector: 'app-about-us-page',
-  imports: [HeroBanner, CoreValue, Avatar, CommonModule],
+  imports: [HeroBanner, CoreValue, Avatar, CommonModule, BookDemo],
   templateUrl: './about-us-page.html',
   styleUrl: './about-us-page.css'
 })
@@ -74,6 +76,19 @@ export class AboutUsPage {
       image: 'images/avatar-7.svg',
       position: 'Advisory Board Member',
       description: 'Pedro is a global thought leader with decades of experience in innovation, public policy, justice reform, and digital transformation. He brings a rare combination of strategic depth and purpose-driven leadership. As CEO of IPS, Pedro has led groundbreaking work in software development for offender management systems and the HORUS 360 iOMS platform; expertise that powerfully complements Virtu Care’s Electronic Health Record (EHR) system. His experience helps us advance our mission to create intelligent, integrated, and humane healthcare solutions.'
+    },
+    {
+      name: 'Anne Spaulding',
+      image: 'images/avatar-7.svg',
+      position: 'Advisory Board Member',
+      description: 'Dr. Spaulding is a physician and public health researcher at Emory University, with a distinguished career focused on correctional healthcare, infectious disease prevention, and healthcare equity. Her expertise sits at the intersection of medicine, justice, and public service, making her an invaluable voice as we expand Virtu’s mission to bring modern EHR and analytics tools to underserved and correctional health systems. As a member of Virtu’s advisory board, Dr. Spaulding will provide clinical guidance, contribute to our strategic development, and help ensure that Virtu’s solutions remain grounded in real-world needs and public health integrity.'
     }
   ]
+
+  bookDemo: IBookDemo = {
+    title: 'Ready to transform your operations and elevate patient care?',
+    description: "Join the growing number of healthcare teams using Virtu's Analytics Portal to take control of their data and drive better outcomes.",
+    buttonText: 'Request a Demo Today',
+    buttonLink: '/contact-us',
+  }
 }

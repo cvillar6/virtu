@@ -15,7 +15,7 @@ declare var VANTA: any;
 export class ContactUsPage implements AfterViewInit {
   heroBanner: IHeroBanner = {
     title: 'Virtu Medical',
-    subtitle: 'Get in Touch with Us',
+    subtitle: 'Get in Touch with',
     description: 'Have questions or need more information? We\'re here to help. Reach out to our team for personalized support and learn how Virtu Medical can transform your healthcare operations.',
   }
   contactUs: ICompanyData[] = [

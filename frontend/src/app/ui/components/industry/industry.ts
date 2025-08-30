@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { IIndustry } from '../../interfaces/industry';
 
 @Component({
@@ -9,4 +9,10 @@ import { IIndustry } from '../../interfaces/industry';
 })
 export class Industry {
   @Input() industry!: IIndustry;
+  @Input() index!: number;
+  @Output() industryClick = new EventEmitter<number>();
+
+  onIndustryClick() {
+    this.industryClick.emit(this.index);
+  }
 }
