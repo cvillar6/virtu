@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 import { BookDemo } from '../../components/book-demo/book-demo';
 import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { IndustrySection } from '../../components/industry-section/industry-section';
@@ -14,6 +15,8 @@ import { IIndustry, IIndustrySection } from '../../interfaces/industry';
   styleUrl: './industries-page.css'
 })
 export class IndustriesPage {
+  constructor(private viewportScroller: ViewportScroller) {}
+
   heroBanner: IHeroBanner = {
     title: "Industries We Serve",
     description: "From hospitals to correctional health systems, Virtu Medical supports organizations that need smart, flexible tools to deliver better outcomes—without added complexity.",
@@ -199,5 +202,13 @@ export class IndustriesPage {
     description: "No matter your role in healthcare, we help you do more with less.",
     buttonText: 'Book a Demo',
     buttonLink: '/contact-us',
+  }
+
+  onIndustryClick(index: number) {
+    const elementId = `industry-${index}`;
+    const element = document.getElementById(elementId);
+    if (element) {
+      this.viewportScroller.scrollToAnchor(elementId);
+    }
   }
 }

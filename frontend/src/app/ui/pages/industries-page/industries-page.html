@@ -11,7 +11,7 @@
         <ul class="grid grid-cols-1 gap-4 lg:grid-cols-3">
             @for (industry of industries; track $index) {
             <li>
-                <app-industry [industry]="industry" />
+                <app-industry [industry]="industry" [index]="$index" (industryClick)="onIndustryClick($event)" />
             </li>
             }
         </ul>
@@ -19,7 +19,8 @@
 
     <section>
         @for (industrySection of industrySection; track $index) {
-        <app-industry-section [industrySection]="industrySection" [even]="$index % 2 === 0" />
+        <app-industry-section [id]="'industry-' + $index" [industrySection]="industrySection"
+            [even]="$index % 2 === 0" />
         }
     </section>
 

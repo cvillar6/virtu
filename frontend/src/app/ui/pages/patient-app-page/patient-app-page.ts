@@ -16,8 +16,8 @@ import { IKeyFeature } from '../../interfaces/key-feature';
 })
 export class PatientAppPage {
   heroBanner: IHeroBanner = {
-    title: 'Patient App',
-    subtitle: 'Your Health, In Your Hands',
+    title: 'Patient Health App',
+    subtitle: 'Intuitive. Always with you.',
     description: 'Secure. Intuitive. Always with you.',
     video: 'videos/app.mp4',
   }
@@ -54,37 +54,44 @@ export class PatientAppPage {
     {
       title: 'Unified Health Dashboard',
       description: 'See your entire medical record—diagnoses, test results, vaccines, past visits—through clean visuals and timelines using our EHR app.',
-      icon: 'images/key-feature.svg'
+      icon: 'images/key-feature.svg',
+      iconHover: 'images/key-feature-hover.svg'
     },
     {
       title: 'Medication & Appointment Manager',
       description: 'Never miss a dose or visit with smart reminders, virtual scheduling, and a built-in digital medicine cabinet.',
-      icon: 'images/key-feature.svg'
+      icon: 'images/key-feature.svg',
+      iconHover: 'images/key-feature-hover.svg'
     },
     {
       title: 'Vitals Integration & Monitoring',
       description: 'Automatically log heart rate, oxygen levels, glucose and more via smartwatches or connected health devices with the EHR app.',
-      icon: 'images/key-feature.svg'
+      icon: 'images/key-feature.svg',
+      iconHover: 'images/key-feature-hover.svg'
     },
     {
       title: 'Secure Messaging & Referrals',
       description: 'Connect directly with providers, manage specialist referrals, and ask questions—all in-app and HIPAA-compliant.',
-      icon: 'images/key-feature.svg'
+      icon: 'images/key-feature.svg',
+      iconHover: 'images/key-feature-hover.svg'
     },
     {
       title: 'Auto-Generated Medical Card',
       description: 'Quickly share allergies, medications, and conditions with any provider to avoid delays or duplication using our EHR app.',
-      icon: 'images/key-feature.svg'
+      icon: 'images/key-feature.svg',
+      iconHover: 'images/key-feature-hover.svg'
     },
     {
       title: 'Pharmacy Locator',
       description: 'Find nearby or preferred pharmacies, and send prescriptions with one tap.',
-      icon: 'images/key-feature.svg'
+      icon: 'images/key-feature.svg',
+      iconHover: 'images/key-feature-hover.svg'
     },
     {
       title: 'Granular Consent & Privacy Controls',
       description: 'Decide who can view your information. Built for transparency and trust—with future caregiver access capabilities via the EHR app.',
-      icon: 'images/key-feature.svg'
+      icon: 'images/key-feature.svg',
+      iconHover: 'images/key-feature-hover.svg'
     }
   ]
 

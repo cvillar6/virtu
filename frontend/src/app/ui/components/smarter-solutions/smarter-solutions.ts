@@ -11,7 +11,7 @@ export class SmarterSolutions {
   readonly SOLUTIONS = [
     {
       title: 'Optimize Healthcare Operations',
-      description: 'Streamline workflows, reduce manual tasks, and enhance collaboration with a unified platform designed for healthcare providers.',
+      description: 'Streamline workflows, reduce manual tasks, and optimize coordination with a unified healthcare data platform designed for healthcare providers.',
       image: 'images/smarter-solution-1.svg'
     },
     {
