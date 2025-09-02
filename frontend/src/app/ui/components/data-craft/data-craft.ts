@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-data-craft',
-  imports: [ButtonModule],
+  imports: [RouterLink],
   templateUrl: './data-craft.html',
   styleUrl: './data-craft.css'
 })

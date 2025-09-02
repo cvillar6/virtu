@@ -79,7 +79,7 @@ export class AboutUsPage {
     },
     {
       name: 'Anne Spaulding',
-      image: 'images/avatar-7.svg',
+      image: 'images/avatar-8.svg',
       position: 'Advisory Board Member',
       description: 'Dr. Spaulding is a physician and public health researcher at Emory University, with a distinguished career focused on correctional healthcare, infectious disease prevention, and healthcare equity. Her expertise sits at the intersection of medicine, justice, and public service, making her an invaluable voice as we expand Virtu’s mission to bring modern EHR and analytics tools to underserved and correctional health systems. As a member of Virtu’s advisory board, Dr. Spaulding will provide clinical guidance, contribute to our strategic development, and help ensure that Virtu’s solutions remain grounded in real-world needs and public health integrity.'
     }
