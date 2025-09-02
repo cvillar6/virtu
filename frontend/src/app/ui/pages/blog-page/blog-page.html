@@ -1,7 +1,7 @@
 <main>
     @if (blog$ | async; as blog) {
     <section>
-        <app-hero-banner [heroBanner]="heroBanner" />
+        <app-hero-banner [heroBanner]="heroBanner()" />
     </section>
 
     <section class="section-container lg:!px-48">

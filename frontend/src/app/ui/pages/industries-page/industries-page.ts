@@ -20,6 +20,7 @@ export class IndustriesPage {
   heroBanner: IHeroBanner = {
     title: "Industries We Serve",
     description: "From hospitals to correctional health systems, Virtu Medical supports organizations that need smart, flexible tools to deliver better outcomes—without added complexity.",
+    backgroundImage: 'bg-blog-hero',
   }
 
   industries: IIndustry[] = [

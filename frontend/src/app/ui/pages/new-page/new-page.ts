@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
 import { INewResponse } from '../../../services/interfaces/new-response';
@@ -20,15 +20,19 @@ export class NewPage {
   private route = inject(ActivatedRoute);
   private strapi = inject(Strapi);
 
-  heroBanner: IHeroBanner = {
+  heroBanner: WritableSignal<IHeroBanner> = signal({
     title: 'Virtu Medical Resources',
     backgroundImage: 'bg-new-hero',
-  }
+  });
 
   new$: Observable<INew | null> = this.route.params.pipe(
     switchMap((params: Params) => this.strapi.getSingleItem('news', params['id'])),
     map((response) => {
       if (response.data) {
+        this.heroBanner.set({
+          title: response.data.Title,
+          backgroundImage: 'bg-new-hero',
+        });
         return {
           documentID: response.data.documentId,
           title: response.data.Title,

@@ -24,6 +24,7 @@ export class BlogsPage {
     title: 'Virtu Medical Resources',
     subtitle: 'Unlock Insights and Expertise with',
     description: 'Explore our collection of blogs, case studies, and whitepapers to stay informed on the latest healthcare trends, best practices, and innovative solutions. Whether you\'re looking for expert advice or in-depth analysis, our resources are here to guide you in navigating the evolving landscape of healthcare technology.',
+    newImage: 'images/use-cases.svg',
   }
 
   first: number = 1;

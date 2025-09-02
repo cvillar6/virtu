@@ -19,6 +19,7 @@ export class AboutUsPage {
   heroBanner: IHeroBanner = {
     title: 'Personalized, Data-Driven Solutions',
     subtitle: 'Revolutionizing Healthcare with',
+    backgroundImage: 'bg-blog-hero',
   }
 
   coreValues: ICoreValue[] = [

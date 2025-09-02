@@ -25,6 +25,7 @@ export class UsecasesPage {
     title: 'Real-World Use Cases',
     subtitle: 'From Virtu Medical',
     description: 'Explore how Virtu Medical solutions are being implemented across a variety of real-world scenarios. From hospital systems to correctional facilities, discover how our technology empowers providers, enhances outcomes, and improves patient care on the ground.',
+    newImage: 'images/use-cases.svg',
   }
 
   first: number = 1;

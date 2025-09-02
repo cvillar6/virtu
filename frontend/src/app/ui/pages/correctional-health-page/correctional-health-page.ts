@@ -19,6 +19,7 @@ export class CorrectionalHealthPage {
     title: 'By correctional doctors for correctional health',
     subtitle: 'Correctional - EHR',
     description: 'Virtu’s correctional EHR platform is purpose-built for correctional facilities—giving clinicians, administrators, and support staff a powerful system designed to meet the unique demands of incarcerated care.',
+    newImage: 'images/ehr.svg',
   }
   features: ICoreValue[] = [
     {

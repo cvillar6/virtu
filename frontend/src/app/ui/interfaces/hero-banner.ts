@@ -7,4 +7,5 @@ export interface IHeroBanner {
     displayButton?: boolean;
     video?: string;
     sponsorImage?: string;
+    newImage?: string;
 }

@@ -1,7 +1,7 @@
 <main class="bg-hero-section section-container px-0!">
-    <div class="px-4 py-40 relative bg-white bg-cover bg-center bg-no-repeat lg:px-24 lg:flex lg:items-center lg:justify-between"
+    <div class="px-4 py-32 relative bg-white bg-cover bg-center bg-no-repeat lg:px-24 lg:grid lg:grid-cols-5 lg:gap-10"
         [ngClass]="heroBanner.backgroundImage">
-        <div class="max-w-5xl relative z-10">
+        <div class="col-span-3 flex flex-col justify-center">
             @if (heroBanner.subtitle) {
             <p class="text-2xl lg:text-5xl lg:text-left"
                 [ngClass]="heroBanner.backgroundImage ? 'text-white text-center' : 'text-description'">
@@ -42,17 +42,25 @@
         </div>
 
         @if (heroBanner.video) {
-        <video class="z-10 max-w-xs" controls autoplay muted loop>
-            <source [src]="heroBanner.video" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="col-span-2 lg:flex lg:justify-center lg:items-center">
+            <video class="z-10 max-w-xs" controls autoplay muted loop>
+                <source [src]="heroBanner.video" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
         }
 
-        @if (!heroBanner.backgroundImage) {
+        @if (heroBanner.newImage) {
+        <div class="hidden col-span-2 relative lg:flex lg:justify-center lg:items-center">
+            <img src="{{heroBanner.newImage}}" alt="New" class="w-full object-cover absolute -bottom-32 right-0">
+        </div>
+        }
+
+        <!-- @if (!heroBanner.backgroundImage) {
         <img src="images/contact-us-m.svg" alt="Contact Us" class="absolute top-0 right-0 h-full lg:hidden z-0"
             loading="lazy">
         <img src="images/contact-us-d.svg" alt="Contact Us" class="hidden lg:block absolute top-0 right-0 h-full  z-0"
             loading="eager">
-        }
+        } -->
     </div>
 </main>

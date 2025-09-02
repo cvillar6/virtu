@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
 import { Strapi } from '../../../services/strapi';
@@ -20,15 +20,19 @@ export class BlogPage {
   private route = inject(ActivatedRoute);
   private strapi = inject(Strapi);
 
-  heroBanner: IHeroBanner = {
+  heroBanner: WritableSignal<IHeroBanner> = signal({
     title: 'Virtu Medical Resources',
     backgroundImage: 'bg-blog-hero',
-  }
+  });
 
   blog$: Observable<IBlog | null> = this.route.params.pipe(
     switchMap((params: Params) => this.strapi.getSingleItem('blogs', params['id'])),
     map((response) => {
       if (response.data) {
+        this.heroBanner.set({
+          title: response.data.Title,
+          backgroundImage: 'bg-blog-hero',
+        });
         return {
           documentID: response.data.documentId,
           title: response.data.Title,

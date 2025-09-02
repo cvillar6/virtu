@@ -24,6 +24,7 @@ export class NewsPage {
     title: 'From Virtu Medical News',
     subtitle: 'Stay Informed with the Latest Updates',
     description: 'Explore timely news updates on healthcare innovation, Virtu Medical announcements, product launches, partnerships, and industry insights.',
+    newImage: 'images/use-cases.svg',
   }
 
   first: number = 1;
