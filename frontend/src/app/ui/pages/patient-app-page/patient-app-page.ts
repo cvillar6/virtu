@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { BookDemo } from '../../components/book-demo/book-demo';
 import { CoreValue } from '../../components/core-value/core-value';
-import { HeroBanner } from '../../components/hero-banner/hero-banner';
 import { KeyFeature } from '../../components/key-feature/key-feature';
 import { IBookDemo } from '../../interfaces/book-demo';
 import { ICoreValue } from '../../interfaces/core-value';
@@ -10,7 +9,7 @@ import { IKeyFeature } from '../../interfaces/key-feature';
 
 @Component({
   selector: 'app-patient-app-page',
-  imports: [HeroBanner, CoreValue, KeyFeature, BookDemo],
+  imports: [CoreValue, KeyFeature, BookDemo],
   templateUrl: './patient-app-page.html',
   styleUrl: './patient-app-page.css'
 })
