@@ -42,8 +42,8 @@
         </div>
 
         @if (heroBanner.video) {
-        <div class="col-span-2 lg:flex lg:justify-center lg:items-center">
-            <video class="z-10 max-w-xs" controls autoplay muted loop>
+        <div class="col-span-2 mt-6 lg:flex lg:justify-center lg:items-center lg:mt-0">
+            <video class="max-w-[300px]" controls autoplay muted loop>
                 <source [src]="heroBanner.video" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
