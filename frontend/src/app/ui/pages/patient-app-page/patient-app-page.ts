@@ -17,7 +17,6 @@ import { IKeyFeature } from '../../interfaces/key-feature';
 export class PatientAppPage {
   heroBanner: IHeroBanner = {
     title: 'Patient Health App',
-    subtitle: 'Intuitive. Always with you.',
     description: 'Secure. Intuitive. Always with you.',
     video: 'videos/app.mp4',
   }
