@@ -7,6 +7,7 @@ import { IModuleFeature } from "./module-feature";
 export interface IStandaloneModule {
     id: string;
     heroBanner: IHeroBanner;
+    description: string;
     moduleFeatures: IModuleFeature[];
     keyFeatures: IKeyFeature[];
     bookDemo: IBookDemo;

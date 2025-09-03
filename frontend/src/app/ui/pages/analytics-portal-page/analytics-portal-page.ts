@@ -20,7 +20,6 @@ export class AnalyticsPortalPage {
   heroBanner: IHeroBanner = {
     title: "Virtu's Healthcare Analytics Platform",
     subtitle: 'Make Smarter, Faster Decisions with',
-    description: "Virtu's Analytics Portal is a powerful Healthcare Analytics Platform that helps healthcare providers manage the daily complexity of running a facility – from data and operations to patient care and finances – all in one place. \n\nWith 9 purpose-built features, the portal turns complex data into clear, actionable insights – helping your team move faster, improve care quality, and stay financially strong.",
     newImage: 'images/analytics-portal.svg',
   }
 
